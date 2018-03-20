@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4673CAB520610C49004E5EC5 /* XAspect-LogAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4673CAB420610C49004E5EC5 /* XAspect-LogAppDelegate.m */; };
+		4673CAB72061124E004E5EC5 /* XAspect-UIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4673CAB62061124E004E5EC5 /* XAspect-UIViewController.m */; };
 		4C53CF3FF2C22022AC312848 /* libPods-MobileFrame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F1FFD2D0FBB52897DF5F1FC /* libPods-MobileFrame.a */; };
 		EBF7FD1E2060EFA400C52DBD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF7FD1D2060EFA400C52DBD /* AppDelegate.m */; };
 		EBF7FD212060EFA400C52DBD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF7FD202060EFA400C52DBD /* ViewController.m */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4673CAB420610C49004E5EC5 /* XAspect-LogAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "XAspect-LogAppDelegate.m"; sourceTree = "<group>"; };
+		4673CAB62061124E004E5EC5 /* XAspect-UIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "XAspect-UIViewController.m"; sourceTree = "<group>"; };
 		4F1FFD2D0FBB52897DF5F1FC /* libPods-MobileFrame.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MobileFrame.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB518FF353FEAC581F3B59CB /* Pods-MobileFrame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileFrame.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobileFrame/Pods-MobileFrame.release.xcconfig"; sourceTree = "<group>"; };
 		BDE3A5B5D833BFE2039B263B /* Pods-MobileFrame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileFrame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobileFrame/Pods-MobileFrame.debug.xcconfig"; sourceTree = "<group>"; };
@@ -44,6 +48,91 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4643D29E206101DA00F871D2 /* Vender */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Vender;
+			sourceTree = "<group>";
+		};
+		4643D2A12061021100F871D2 /* Expand */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Expand;
+			sourceTree = "<group>";
+		};
+		4643D2A22061023000F871D2 /* SDKFile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SDKFile;
+			sourceTree = "<group>";
+		};
+		4673CAAD20610AC3004E5EC5 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				4673CAAE20610AC3004E5EC5 /* JsHtmlCss */,
+				4673CAAF20610AC3004E5EC5 /* Plist */,
+				4673CAB020610AC3004E5EC5 /* Image */,
+				4673CAB120610AC3004E5EC5 /* Audio */,
+				4673CAB220610AC3004E5EC5 /* AppDelegate */,
+				4673CAB320610AC3004E5EC5 /* Global */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		4673CAAE20610AC3004E5EC5 /* JsHtmlCss */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = JsHtmlCss;
+			sourceTree = "<group>";
+		};
+		4673CAAF20610AC3004E5EC5 /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				EBF7FD2A2060EFA400C52DBD /* Info.plist */,
+			);
+			path = Plist;
+			sourceTree = "<group>";
+		};
+		4673CAB020610AC3004E5EC5 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				EBF7FD252060EFA400C52DBD /* Assets.xcassets */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		4673CAB120610AC3004E5EC5 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		4673CAB220610AC3004E5EC5 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				EBF7FD1C2060EFA400C52DBD /* AppDelegate.h */,
+				EBF7FD1D2060EFA400C52DBD /* AppDelegate.m */,
+				4673CAB420610C49004E5EC5 /* XAspect-LogAppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		4673CAB320610AC3004E5EC5 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				EBF7FD222060EFA400C52DBD /* Main.storyboard */,
+				EBF7FD272060EFA400C52DBD /* LaunchScreen.storyboard */,
+				EBF7FD2B2060EFA400C52DBD /* main.m */,
+				4673CAB62061124E004E5EC5 /* XAspect-UIViewController.m */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
 		81A34CB97A5DFBBCC8A8AB17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -82,15 +171,12 @@
 		EBF7FD1B2060EFA400C52DBD /* MobileFrame */ = {
 			isa = PBXGroup;
 			children = (
-				EBF7FD1C2060EFA400C52DBD /* AppDelegate.h */,
-				EBF7FD1D2060EFA400C52DBD /* AppDelegate.m */,
+				4673CAAD20610AC3004E5EC5 /* Resource */,
+				4643D29E206101DA00F871D2 /* Vender */,
+				4643D2A12061021100F871D2 /* Expand */,
+				4643D2A22061023000F871D2 /* SDKFile */,
 				EBF7FD1F2060EFA400C52DBD /* ViewController.h */,
 				EBF7FD202060EFA400C52DBD /* ViewController.m */,
-				EBF7FD222060EFA400C52DBD /* Main.storyboard */,
-				EBF7FD252060EFA400C52DBD /* Assets.xcassets */,
-				EBF7FD272060EFA400C52DBD /* LaunchScreen.storyboard */,
-				EBF7FD2A2060EFA400C52DBD /* Info.plist */,
-				EBF7FD2B2060EFA400C52DBD /* main.m */,
 			);
 			path = MobileFrame;
 			sourceTree = "<group>";
@@ -220,7 +306,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4673CAB72061124E004E5EC5 /* XAspect-UIViewController.m in Sources */,
 				EBF7FD212060EFA400C52DBD /* ViewController.m in Sources */,
+				4673CAB520610C49004E5EC5 /* XAspect-LogAppDelegate.m in Sources */,
 				EBF7FD2C2060EFA400C52DBD /* main.m in Sources */,
 				EBF7FD1E2060EFA400C52DBD /* AppDelegate.m in Sources */,
 			);
@@ -359,7 +447,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q47C7H5298;
-				INFOPLIST_FILE = MobileFrame/Info.plist;
+				INFOPLIST_FILE = MobileFrame/Resource/Plist/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Benson.MobileFrame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -374,7 +463,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q47C7H5298;
-				INFOPLIST_FILE = MobileFrame/Info.plist;
+				INFOPLIST_FILE = MobileFrame/Resource/Plist/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Benson.MobileFrame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
