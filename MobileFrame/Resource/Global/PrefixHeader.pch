@@ -1,0 +1,34 @@
+//
+//  PrefixHeader.pch
+//  MobileFrame
+//
+//  Created by Benson on 2018/3/21.
+//  Copyright © 2018年 Benson. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+//引入Masonry两个宏 便于写布局代码
+#define MAS_SHORTHAND
+#define MAS_SHORTHAND_GLOBALS
+
+//日志系统
+#import <DDLog.h>
+#import <CocoaLumberjack.h>
+
+//键盘
+#import "KeyboardManager.h"
+
+#import "GVUserDefaults+Properties.h"
+
+// 宏 
+#import "Macros.h"
+#import "Constants.h"
+
+//Net
+#import "YTKNetwork.h"
+#import "BaseRequestService.h"
+#import "NetWorkEnvironment.h"
+
+#endif /* PrefixHeader_pch */

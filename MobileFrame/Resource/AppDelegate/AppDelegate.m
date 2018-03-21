@@ -7,7 +7,9 @@
 //
 
 #import "AppDelegate.h"
-
+#import "introductoryPagesHelper.h"
+#import "LogInViewController.h"
+#import "HomeViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +19,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    //键盘统一收回处理
+    [self configureBoardManager];
+    
+    //加载页面
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self setupHomeViewController];
+    
+    //引导页面加载
+    [self setupIntroductoryPage];
+    
     return YES;
 }
 
@@ -47,5 +62,46 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#pragma mark - 键盘收回管理
+-(void)configureBoardManager
+{
+    IQKeyboardManager *manager = [IQKeyboardManager sharedManager];
+    manager.enable = YES;
+    manager.shouldResignOnTouchOutside = YES;
+    manager.shouldToolbarUsesTextFieldTintColor = YES;
+    manager.keyboardDistanceFromTextField=60;
+    manager.enableAutoToolbar = NO;
+}
+
+#pragma mark 引导页
+-(void)setupIntroductoryPage
+{
+    if (UserProperties.isNoFirstLaunch)
+    {
+        return;
+    }
+    UserProperties.isNoFirstLaunch=YES;
+    NSArray *images=@[@"introductoryPage1",@"introductoryPage2",@"introductoryPage3",@"introductoryPage4"];
+    [introductoryPagesHelper showIntroductoryPageView:images];
+}
+
+#pragma mark 自定义跳转不同的页面
+//登录页面
+-(void)setupLoginViewController
+{
+    LogInViewController *logInVc = [[LogInViewController alloc]init];
+    self.window.rootViewController = logInVc;
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+}
+
+//首页
+-(void)setupHomeViewController
+{
+    HomeViewController *tabBarController = [[HomeViewController alloc] init];
+    [self.window setRootViewController:tabBarController];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+}
 
 @end

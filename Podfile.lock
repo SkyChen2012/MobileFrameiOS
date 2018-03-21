@@ -1,17 +1,54 @@
 PODS:
+  - AFNetworking (3.2.0):
+    - AFNetworking/NSURLSession (= 3.2.0)
+    - AFNetworking/Reachability (= 3.2.0)
+    - AFNetworking/Security (= 3.2.0)
+    - AFNetworking/Serialization (= 3.2.0)
+    - AFNetworking/UIKit (= 3.2.0)
+  - AFNetworking/NSURLSession (3.2.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.0)
+  - AFNetworking/Security (3.2.0)
+  - AFNetworking/Serialization (3.2.0)
+  - AFNetworking/UIKit (3.2.0):
+    - AFNetworking/NSURLSession
+  - CocoaLumberjack (3.2.1):
+    - CocoaLumberjack/Default (= 3.2.1)
+    - CocoaLumberjack/Extensions (= 3.2.1)
+  - CocoaLumberjack/Default (3.2.1)
+  - CocoaLumberjack/Extensions (3.2.1):
+    - CocoaLumberjack/Default
+  - CYLTabBarController (1.17.6)
+  - FLEX (2.4.0)
+  - IQKeyboardManager (3.3.7)
   - XAspect (1.0.5):
     - XAspect/Core (= 1.0.5)
     - XAspect/Macros (= 1.0.5)
   - XAspect/Core (1.0.5):
     - XAspect/Macros
   - XAspect/Macros (1.0.5)
+  - YTKNetwork (2.0.4):
+    - AFNetworking (~> 3.0)
 
 DEPENDENCIES:
+  - CocoaLumberjack (~> 3.2.0)
+  - CYLTabBarController
+  - FLEX (~> 2.0)
+  - IQKeyboardManager (~> 3.3.7)
   - XAspect
+  - YTKNetwork (~> 2.0.4)
 
 SPEC CHECKSUMS:
+  AFNetworking: 8ac6017b94ea105479f7776e5288e48ae9c59bb4
+  CocoaLumberjack: 2800c03334042fe80589423c8d80e582dcaec482
+  CYLTabBarController: c374643dea6dadece8bdff9c70f7387f8ffd7d08
+  FLEX: bd1a39e55b56bb413b6f1b34b3c10a0dc44ef079
+  IQKeyboardManager: 249c3946acf61345c18b038eb50863fe2793e3a8
   XAspect: db50bf487f92dbb8557a7a5365556966c8493af8
+  YTKNetwork: df8a7a5597bda1664a4efaa7ef871a818a887fe0
 
-PODFILE CHECKSUM: 0afb68b9482204bb7dff1a5e26d023a04f1c0410
+PODFILE CHECKSUM: c3b36e0fd6e777ab19e45f23ee8bf8e611be8db2
 
 COCOAPODS: 1.4.0.rc.1

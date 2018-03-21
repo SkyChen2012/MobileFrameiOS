@@ -15,7 +15,7 @@
 @classPatchField(UIViewController)
 
 @synthesizeNucleusPatch(Default, -, void, viewDidLoad);
-@synthesizeNucleusPatch(Default, -, void, viewDidAppear:(BOOL)animated);
+//@synthesizeNucleusPatch(Default, -, void, viewDidAppear:(BOOL)animated);
 
 AspectPatch(-, void, viewDidLoad){
     

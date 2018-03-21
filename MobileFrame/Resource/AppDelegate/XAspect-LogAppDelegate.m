@@ -7,7 +7,13 @@
 //
 
 #import "AppDelegate.h"
+#import "FileLogger.h"
+
+#if DEBUG
+#import "FLEXManager.h"
+#endif
 #import "XAspect.h"
+
 
 /**
  必须要有的宏定义, 而且必须写在最前面
@@ -35,9 +41,14 @@
 AspectPatch(-, BOOL, application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions)
 {
     //如果是测试本地版本开启调试工具FLEX
+#if DEBUG&LOCAL
+    [[FLEXManager sharedManager] showExplorer];
+#endif
     
     //日志初始化
-    NSLog(@"日志初始化");
+    [FileLogger sharedManager];
+    
+    
     return XAMessageForward(application:application didFinishLaunchingWithOptions:launchOptions);
 }
 
