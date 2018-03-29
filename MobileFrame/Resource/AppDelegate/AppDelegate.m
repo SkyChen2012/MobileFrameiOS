@@ -10,6 +10,8 @@
 #import "introductoryPagesHelper.h"
 #import "LogInViewController.h"
 #import "HomeViewController.h"
+
+#import "PubHomeViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -98,7 +100,7 @@
 //首页
 -(void)setupHomeViewController
 {
-    HomeViewController *tabBarController = [[HomeViewController alloc] init];
+    PubHomeViewController *tabBarController = [[PubHomeViewController alloc] init];
     [self.window setRootViewController:tabBarController];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

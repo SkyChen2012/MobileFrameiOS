@@ -30,9 +30,9 @@
 
 -(void)loadPageView
 {
-    UIScrollView *scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, MainScreen_width, MainScreen_height)];
+    UIScrollView *scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, Main_Screen_Width, Main_Screen_Height)];
     
-    scrollView.contentSize = CGSizeMake((_imageArray.count + 1)*MainScreen_width, MainScreen_height);
+    scrollView.contentSize = CGSizeMake((_imageArray.count + 1)*Main_Screen_Width, Main_Screen_Height);
     //设置反野效果，不允许反弹，不显示水平滑动条，设置代理为自己
     scrollView.pagingEnabled = YES;//设置分页
     scrollView.bounces = NO;
@@ -43,14 +43,14 @@
     
     for (int i = 0; i < _imageArray.count; i++) {
         UIImageView *imageView = [[UIImageView alloc]init];
-        imageView.frame = CGRectMake(i * MainScreen_width, 0, MainScreen_width, MainScreen_height);
+        imageView.frame = CGRectMake(i * Main_Screen_Width, 0, Main_Screen_Width, Main_Screen_Height);
         UIImage *image = [UIImage imageNamed:_imageArray[i]];
         imageView.image = image;
         
         [scrollView addSubview:imageView];
     }
     
-    UIPageControl *pageControl = [[UIPageControl alloc]initWithFrame:CGRectMake(MainScreen_width/2, MainScreen_height - 60, 0, 40)];
+    UIPageControl *pageControl = [[UIPageControl alloc]initWithFrame:CGRectMake(Main_Screen_Width/2, Main_Screen_Height - 60, 0, 40)];
     pageControl.numberOfPages = _imageArray.count;
     pageControl.backgroundColor = [UIColor clearColor];
     [self addSubview:pageControl];
@@ -78,7 +78,7 @@
         _pageControl.currentPage = offSet.x/(self.bounds.size.width);//计算当前的页码
         [scrollView setContentOffset:CGPointMake(self.bounds.size.width * (_pageControl.currentPage), scrollView.contentOffset.y) animated:YES];
     }
-    if (scrollView.contentOffset.x == (_imageArray.count) *MainScreen_width) {
+    if (scrollView.contentOffset.x == (_imageArray.count) *Main_Screen_Width) {
         [self removeFromSuperview];
     }
 }

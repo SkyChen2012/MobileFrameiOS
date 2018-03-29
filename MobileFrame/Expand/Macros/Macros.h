@@ -27,9 +27,6 @@
 #define App_Frame_Height        [[UIScreen mainScreen] applicationFrame].size.height
 #define App_Frame_Width         [[UIScreen mainScreen] applicationFrame].size.width
 
-#define MainScreen_width  [UIScreen mainScreen].bounds.size.width//宽
-#define MainScreen_height [UIScreen mainScreen].bounds.size.height//高
-
 //获取View的属性
 #define GetViewWidth(view)  view.frame.size.width
 #define GetViewHeight(view) view.frame.size.height
