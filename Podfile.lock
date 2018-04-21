@@ -29,6 +29,7 @@ PODS:
     - DoubleConversion
     - glog
   - glog (0.3.4)
+  - GTSDK (2.2.0.0)
   - IQKeyboardManager (3.3.7)
   - Masonry (1.1.0)
   - React/Core (0.54.3):
@@ -78,6 +79,7 @@ DEPENDENCIES:
   - FLEX (~> 2.0)
   - Folly (from `../AppReactNativeFrameServer/node_modules/react-native/third-party-podspecs/Folly.podspec`)
   - glog (from `../AppReactNativeFrameServer/node_modules/react-native/third-party-podspecs/GLog.podspec`)
+  - GTSDK
   - IQKeyboardManager (~> 3.3.7)
   - Masonry
   - React/Core (from `../AppReactNativeFrameServer/node_modules/react-native`)
@@ -111,6 +113,7 @@ SPEC CHECKSUMS:
   FLEX: bd1a39e55b56bb413b6f1b34b3c10a0dc44ef079
   Folly: 211775e49d8da0ca658aebc8eab89d642935755c
   glog: 1de0bb937dccdc981596d3b5825ebfb765017ded
+  GTSDK: 9be6d3c6e7608cb78bb35deba7dbabcde651b0c3
   IQKeyboardManager: 249c3946acf61345c18b038eb50863fe2793e3a8
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   React: c237e42de9c70e5cac6eeb52b4cfd3a0910c1f00
@@ -118,6 +121,6 @@ SPEC CHECKSUMS:
   yoga: 55da126afc384965b96bff46652464373b330add
   YTKNetwork: df8a7a5597bda1664a4efaa7ef871a818a887fe0
 
-PODFILE CHECKSUM: d6c5bf974ac1b6eb353c3115d36d2091bc2e0295
+PODFILE CHECKSUM: a14e4bf212c67abf3877ad4345a003c41218cfc4
 
 COCOAPODS: 1.4.0

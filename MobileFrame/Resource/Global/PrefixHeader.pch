@@ -33,4 +33,7 @@
 
 //iOS自动布局框架
 #import "Masonry.h"
+
+//第三方SDK的Key及配置
+#import "ThirdMacros.h"
 #endif /* PrefixHeader_pch */

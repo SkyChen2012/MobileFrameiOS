@@ -25,7 +25,9 @@
         if([contents count] == 2) {
             NSString *key = [contents objectAtIndex:0];
             NSString *value = [contents objectAtIndex:1];
-            value = [value stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+//            value = [value stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+//            fix by Benson 2018.4 # stringByReplacingPercentEscapesUsingEncoding  iOS9.0 弃用，使用新API stringByRemovingPercentEncoding
+            value = [value stringByRemovingPercentEncoding];
             if (key && value) {
                 [dict setObject:value forKey:key];
             }

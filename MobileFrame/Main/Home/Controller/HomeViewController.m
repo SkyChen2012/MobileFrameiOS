@@ -10,6 +10,9 @@
 
 #import <React/RCTRootView.h>
 
+#import "UIColor+Gradient.h"
+#import "UIColor+Random.h"
+
 @interface HomeViewController ()
 
 @end
@@ -27,8 +30,9 @@
     
  
     UIButton *loginButton = [[UIButton alloc] init];  
-    loginButton.backgroundColor = [UIColor blueColor];  
-    [loginButton setTitle:@"登录" forState:UIControlStateNormal]; 
+//    loginButton.backgroundColor = [UIColor gradientFromColor:[UIColor blueColor] toColor:[UIColor redColor] withHeight:50];
+    loginButton.backgroundColor = [UIColor RandomColor];
+    [loginButton setTitle:@"登录" forState:UIControlStateNormal];
     [loginButton addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:loginButton];
     
