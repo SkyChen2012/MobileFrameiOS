@@ -26,9 +26,18 @@ pod 'CYLTabBarController'
 
 #iOS自动布局框架
 pod 'Masonry'
+# 数据库
+
+pod 'FMDB', '~> 2.7.2'
 
 #个推SDK
 pod 'GTSDK'  
+
+# MQTT
+pod 'MQTTClient', '~> 0.14.0'
+
+# 菊花
+pod 'MBProgressHUD', '~> 1.1.0'
 
 # 'node_modules'目录一般位于根目录中
 # 但是如果你的结构不同，那你就要根据实际路径修改下面的`:path`

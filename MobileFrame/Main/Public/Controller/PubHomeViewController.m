@@ -12,7 +12,7 @@
 
 #import "HomeViewController.h"
 #import "TheoryViewController.h"
-#import "LogInViewController.h"
+#import "LoginViewController.h"
 
 #import "DiscoveryViewController.h"
 @interface PubHomeViewController ()
@@ -96,9 +96,9 @@
     UINavigationController *secondNavigationController = [[PubBaseNavigationController alloc]
                                                           initWithRootViewController:secondViewController];
     
-    LogInViewController *logInViewController = [[LogInViewController alloc] init];
+    LoginViewController *loginViewController = [[LoginViewController alloc] init];
     UINavigationController *fiveNavigationController = [[PubBaseNavigationController alloc]
-                                                          initWithRootViewController:logInViewController];
+                                                          initWithRootViewController:loginViewController];
 
 //    UMengSocialViewController *thirdViewController = [[UMengSocialViewController alloc] init];
 //    UINavigationController *thirdNavigationController = [[MPBaseNavigationController alloc]

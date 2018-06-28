@@ -10,6 +10,15 @@
 
 #import "LifeCycleViewController.h"
 #import "MultithreadViewController.h"
+#import "RunTimeViewController.h"
+#import "ProtocolOptionalViewController.h"
+#import "BlockLoopViewController.h"
+#import "DataSourceViewController.h"
+#import "CADisplayLinkViewController.h"
+#import "UIBezierPathViewController.h"
+#import "CGContextViewController.h"
+#import "AnimationHomeViewController.h"
+#import "FMDBViewController.h"
 
 @interface TheoryViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -34,7 +43,7 @@
 - (void)setupTableController{
     
     if (!self.dataArray) {
-        self.dataArray=@[@"viewController生命周期",@"运行时RunTime知识运用",@"多线程知识运用",@"Protocol实现类",@"Block内存释放知识点",@"TableViewDataSource提取",@"CADisplayLink知识运用",@"CAShapeLayer与UIBezierPath知识运用",@"CGContext知识点运用"];
+        self.dataArray=@[@"viewController生命周期",@"运行时RunTime知识运用",@"多线程知识运用",@"Protocol实现类",@"Block内存释放知识点",@"TableViewDataSource提取",@"CADisplayLink知识运用",@"CAShapeLayer与UIBezierPath知识运用",@"CGContext知识点运用",@"Animation动画",@"FMDB 数据库"];
     }
     
     //初始化表格
@@ -70,9 +79,17 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UITableViewCell class]) forIndexPath:indexPath];
+    
+    NSString *CellIdentifier = [NSString stringWithFormat:@"Cell%ld%ld", [indexPath section], [indexPath row]];//以indexPath来唯一确定cell 
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier]; //出列可重用的cell 
+    if (cell == nil) { 
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier]; 
+    }
+    
     cell.accessoryType    = UITableViewCellAccessoryDisclosureIndicator;
     cell.textLabel.text   = self.dataArray[indexPath.row];
+    cell.backgroundColor = [UIColor RandomColor];
+    
     return cell;
 }
 
@@ -83,65 +100,58 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    UIViewController *vc;
+    
     switch (indexPath.row) {
-            case 0:
-        {
-            LifeCycleViewController *vc=[[LifeCycleViewController alloc]init];
-            [self.navigationController pushViewController:vc animated:YES];
+        
+        case 0:
+            vc = [[LifeCycleViewController alloc] init];
             break;
-        }
-            case 1:
-        {
-//            MPRunTimeViewController *vc=[[MPRunTimeViewController alloc]init];
-//            [self.navigationController pushViewController:vc animated:YES];
+        
+        case 1:
+            vc = [[RunTimeViewController alloc] init];
             break;
-        }
-            case 2:
-        {
-            MultithreadViewController *vc=[[MultithreadViewController alloc]init];
-            [self.navigationController pushViewController:vc animated:YES];
+        
+        case 2:
+            vc = [[MultithreadViewController alloc] init];
             break;
-        }
-            case 3:
-        {
-//            MPProtocolOptionalViewController *vc=[[MPProtocolOptionalViewController alloc]init];
-//            [self.navigationController pushViewController:vc animated:YES];
+        
+        case 3:
+            vc = [[ProtocolOptionalViewController alloc] init];
             break;
-        }
-            case 4:
-        {            
-//            MPBlockLoopViewController *vc=[[MPBlockLoopViewController alloc]init];
-//            [self.navigationController pushViewController:vc animated:YES];
+        
+        case 4:
+            vc = [[BlockLoopViewController alloc] init];
             break;
-        }
-            case 5:
-        {
-//            MPDataSourceViewController *vc=[[MPDataSourceViewController alloc]init];
-//            [self.navigationController pushViewController:vc animated:YES];
+        
+        case 5:
+            vc = [[DataSourceViewController alloc] init];
             break;
-        }
-            case 6:
-        {
-//            MPCADisplayLinkViewController *vc=[[MPCADisplayLinkViewController alloc]init];
-//            [self.navigationController pushViewController:vc animated:YES];
+        
+        case 6:
+            vc = [[CADisplayLinkViewController alloc] init];
             break;
-        }
-            case 7:
-        {
-//            MPUIBezierPathViewController *vc=[[MPUIBezierPathViewController alloc]init];
-//            [self.navigationController pushViewController:vc animated:YES];
+        
+        case 7:
+            vc = [[UIBezierPathViewController alloc] init];
             break;
-        }
-            case 8:
-        {
-//            MPCGContextViewController *vc=[[MPCGContextViewController alloc]init];
-//            [self.navigationController pushViewController:vc animated:YES];
+        
+        case 8:
+            vc = [[CGContextViewController alloc] init];
             break;
-        }
+            
+        case 9:
+            vc = [[AnimationHomeViewController alloc] init];
+            break;
+            
+        case 10:
+            vc = [[FMDBViewController alloc] init];
+            break;
         default:
             break;
     }
-
+    
+    [self.navigationController pushViewController:vc animated:YES];
 }
 #pragma mark - CodeStandardsDelegate
 

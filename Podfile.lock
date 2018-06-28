@@ -1,18 +1,18 @@
 PODS:
-  - AFNetworking (3.2.0):
-    - AFNetworking/NSURLSession (= 3.2.0)
-    - AFNetworking/Reachability (= 3.2.0)
-    - AFNetworking/Security (= 3.2.0)
-    - AFNetworking/Serialization (= 3.2.0)
-    - AFNetworking/UIKit (= 3.2.0)
-  - AFNetworking/NSURLSession (3.2.0):
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.2.0)
-  - AFNetworking/Security (3.2.0)
-  - AFNetworking/Serialization (3.2.0)
-  - AFNetworking/UIKit (3.2.0):
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
   - boost-for-react-native (1.63.0)
   - CocoaLumberjack (3.2.1):
@@ -21,9 +21,12 @@ PODS:
   - CocoaLumberjack/Default (3.2.1)
   - CocoaLumberjack/Extensions (3.2.1):
     - CocoaLumberjack/Default
-  - CYLTabBarController (1.17.6)
+  - CYLTabBarController (1.17.10)
   - DoubleConversion (1.1.5)
   - FLEX (2.4.0)
+  - FMDB (2.7.2):
+    - FMDB/standard (= 2.7.2)
+  - FMDB/standard (2.7.2)
   - Folly (2016.09.26.00):
     - boost-for-react-native
     - DoubleConversion
@@ -32,6 +35,15 @@ PODS:
   - GTSDK (2.2.0.0)
   - IQKeyboardManager (3.3.7)
   - Masonry (1.1.0)
+  - MBProgressHUD (1.1.0)
+  - MQTTClient (0.14.0):
+    - MQTTClient/Core (= 0.14.0)
+  - MQTTClient/Core (0.14.0):
+    - MQTTClient/Manager
+    - MQTTClient/Min
+  - MQTTClient/Manager (0.14.0):
+    - MQTTClient/Min
+  - MQTTClient/Min (0.14.0)
   - React/Core (0.54.3):
     - yoga (= 0.54.3.React)
   - React/CxxBridge (0.54.3):
@@ -77,11 +89,14 @@ DEPENDENCIES:
   - CYLTabBarController
   - DoubleConversion (from `../AppReactNativeFrameServer/node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
   - FLEX (~> 2.0)
+  - FMDB (~> 2.7.2)
   - Folly (from `../AppReactNativeFrameServer/node_modules/react-native/third-party-podspecs/Folly.podspec`)
   - glog (from `../AppReactNativeFrameServer/node_modules/react-native/third-party-podspecs/GLog.podspec`)
   - GTSDK
   - IQKeyboardManager (~> 3.3.7)
   - Masonry
+  - MBProgressHUD (~> 1.1.0)
+  - MQTTClient (~> 0.14.0)
   - React/Core (from `../AppReactNativeFrameServer/node_modules/react-native`)
   - React/CxxBridge (from `../AppReactNativeFrameServer/node_modules/react-native`)
   - React/DevSupport (from `../AppReactNativeFrameServer/node_modules/react-native`)
@@ -92,35 +107,54 @@ DEPENDENCIES:
   - yoga (from `../AppReactNativeFrameServer/node_modules/react-native/ReactCommon/yoga`)
   - YTKNetwork (~> 2.0.4)
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - boost-for-react-native
+    - CocoaLumberjack
+    - CYLTabBarController
+    - FLEX
+    - FMDB
+    - GTSDK
+    - IQKeyboardManager
+    - Masonry
+    - MBProgressHUD
+    - MQTTClient
+    - XAspect
+    - YTKNetwork
+
 EXTERNAL SOURCES:
   DoubleConversion:
-    :podspec: ../AppReactNativeFrameServer/node_modules/react-native/third-party-podspecs/DoubleConversion.podspec
+    :podspec: "../AppReactNativeFrameServer/node_modules/react-native/third-party-podspecs/DoubleConversion.podspec"
   Folly:
-    :podspec: ../AppReactNativeFrameServer/node_modules/react-native/third-party-podspecs/Folly.podspec
+    :podspec: "../AppReactNativeFrameServer/node_modules/react-native/third-party-podspecs/Folly.podspec"
   glog:
-    :podspec: ../AppReactNativeFrameServer/node_modules/react-native/third-party-podspecs/GLog.podspec
+    :podspec: "../AppReactNativeFrameServer/node_modules/react-native/third-party-podspecs/GLog.podspec"
   React:
-    :path: ../AppReactNativeFrameServer/node_modules/react-native
+    :path: "../AppReactNativeFrameServer/node_modules/react-native"
   yoga:
-    :path: ../AppReactNativeFrameServer/node_modules/react-native/ReactCommon/yoga
+    :path: "../AppReactNativeFrameServer/node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
-  AFNetworking: 8ac6017b94ea105479f7776e5288e48ae9c59bb4
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
   CocoaLumberjack: 2800c03334042fe80589423c8d80e582dcaec482
-  CYLTabBarController: c374643dea6dadece8bdff9c70f7387f8ffd7d08
+  CYLTabBarController: 8879563850afc2517dd6f3f2ead4fcad886194ab
   DoubleConversion: ebb6747c5b66026ad4f97b789c3ceac6f18e57a6
   FLEX: bd1a39e55b56bb413b6f1b34b3c10a0dc44ef079
+  FMDB: 6198a90e7b6900cfc046e6bc0ef6ebb7be9236aa
   Folly: 211775e49d8da0ca658aebc8eab89d642935755c
   glog: 1de0bb937dccdc981596d3b5825ebfb765017ded
   GTSDK: 9be6d3c6e7608cb78bb35deba7dbabcde651b0c3
   IQKeyboardManager: 249c3946acf61345c18b038eb50863fe2793e3a8
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  MQTTClient: eea2eaaa6ddef852a1019a4dda091e22ad928b58
   React: c237e42de9c70e5cac6eeb52b4cfd3a0910c1f00
   XAspect: db50bf487f92dbb8557a7a5365556966c8493af8
   yoga: 55da126afc384965b96bff46652464373b330add
   YTKNetwork: df8a7a5597bda1664a4efaa7ef871a818a887fe0
 
-PODFILE CHECKSUM: a14e4bf212c67abf3877ad4345a003c41218cfc4
+PODFILE CHECKSUM: 5bb65117a706fabf06afea30ec5db9154149d019
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3

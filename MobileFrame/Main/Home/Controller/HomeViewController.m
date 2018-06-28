@@ -48,7 +48,7 @@
 - (void)buttonClick:(UIButton *)button{
     
     NSLog(@"High Score Button Pressed");
-    NSURL *jsCodeLocation = [NSURL URLWithString:@"http://192.168.1.107:8081/index.bundle?platform=ios"];
+    NSURL *jsCodeLocation = [NSURL URLWithString:@"http://192.168.1.126:8081/index.ios.bundle?platform=ios"];
     RCTRootView *rootView =[[RCTRootView alloc] initWithBundleURL : jsCodeLocation
                                                 moduleName        : @"MyReactNativeApp"
                                                 initialProperties : @{

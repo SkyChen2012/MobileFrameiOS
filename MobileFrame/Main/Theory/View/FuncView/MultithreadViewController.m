@@ -10,6 +10,7 @@
 #import "GCDViewController.h"
 #import "OperationViewController.h"
 #import "LockViewController.h"
+
 @interface MultithreadViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,strong) NSArray             *dataArray;
@@ -75,6 +76,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UITableViewCell class]) forIndexPath:indexPath];
+    
+    cell.backgroundColor = [UIColor RandomColor];
     cell.accessoryType    = UITableViewCellAccessoryDisclosureIndicator;
     cell.textLabel.text   = self.dataArray[indexPath.row];
     return cell;

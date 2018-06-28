@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "introductoryPagesHelper.h"
-#import "LogInViewController.h"
+#import "LoginViewController.h"
 #import "HomeViewController.h"
 
 #import "PubHomeViewController.h"
@@ -91,8 +91,8 @@
 //登录页面
 -(void)setupLoginViewController
 {
-    LogInViewController *logInVc = [[LogInViewController alloc]init];
-    self.window.rootViewController = logInVc;
+    LoginViewController *loginVc = [[LoginViewController alloc]init];
+    self.window.rootViewController = loginVc;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 }
