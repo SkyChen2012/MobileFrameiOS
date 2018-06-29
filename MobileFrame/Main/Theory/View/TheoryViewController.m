@@ -84,6 +84,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier]; //出列可重用的cell 
     if (cell == nil) { 
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier]; 
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
     cell.accessoryType    = UITableViewCellAccessoryDisclosureIndicator;

@@ -32,6 +32,15 @@
 		466C041E2064D19E00CF5383 /* LockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 466C041D2064D19E00CF5383 /* LockViewController.m */; };
 		4673CAB520610C49004E5EC5 /* XAspect-LogAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4673CAB420610C49004E5EC5 /* XAspect-LogAppDelegate.m */; };
 		4673CAB72061124E004E5EC5 /* XAspect-UIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4673CAB62061124E004E5EC5 /* XAspect-UIViewController.m */; };
+		46744E3120E5CC94002BB7A0 /* DCPathButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 46744E2420E5CC94002BB7A0 /* DCPathButton.m */; };
+		46744E3220E5CC94002BB7A0 /* DCPathItemButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 46744E2620E5CC94002BB7A0 /* DCPathItemButton.m */; };
+		46744E3320E5CC94002BB7A0 /* DCPathCenterButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 46744E2820E5CC94002BB7A0 /* DCPathCenterButton.m */; };
+		46744E3420E5CC94002BB7A0 /* DWBubbleMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 46744E2A20E5CC94002BB7A0 /* DWBubbleMenuButton.m */; };
+		46744E3520E5CC94002BB7A0 /* MCFireworksButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 46744E2D20E5CC94002BB7A0 /* MCFireworksButton.m */; };
+		46744E3620E5CC94002BB7A0 /* MCFireworksView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46744E2E20E5CC94002BB7A0 /* MCFireworksView.m */; };
+		46744E6220E5FBF3002BB7A0 /* fold.caf in Resources */ = {isa = PBXBuildFile; fileRef = 46744E5F20E5FBF3002BB7A0 /* fold.caf */; };
+		46744E6320E5FBF3002BB7A0 /* selected.caf in Resources */ = {isa = PBXBuildFile; fileRef = 46744E6020E5FBF3002BB7A0 /* selected.caf */; };
+		46744E6420E5FBF3002BB7A0 /* bloom.caf in Resources */ = {isa = PBXBuildFile; fileRef = 46744E6120E5FBF3002BB7A0 /* bloom.caf */; };
 		4679F2C020DB70B700265A3E /* LoggerDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4679F2BF20DB70B700265A3E /* LoggerDetailViewController.m */; };
 		4679F2C320DB746A00265A3E /* LoggerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4679F2C220DB746A00265A3E /* LoggerViewController.m */; };
 		4679F2CF20DB9A8000265A3E /* MBProgressHUD+XX.m in Sources */ = {isa = PBXBuildFile; fileRef = 4679F2CE20DB9A8000265A3E /* MBProgressHUD+XX.m */; };
@@ -339,6 +348,21 @@
 		466C041D2064D19E00CF5383 /* LockViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LockViewController.m; sourceTree = "<group>"; };
 		4673CAB420610C49004E5EC5 /* XAspect-LogAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "XAspect-LogAppDelegate.m"; sourceTree = "<group>"; };
 		4673CAB62061124E004E5EC5 /* XAspect-UIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "XAspect-UIViewController.m"; sourceTree = "<group>"; };
+		46744E2320E5CC94002BB7A0 /* DCPathItemButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPathItemButton.h; sourceTree = "<group>"; };
+		46744E2420E5CC94002BB7A0 /* DCPathButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPathButton.m; sourceTree = "<group>"; };
+		46744E2520E5CC94002BB7A0 /* DCPathCenterButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPathCenterButton.h; sourceTree = "<group>"; };
+		46744E2620E5CC94002BB7A0 /* DCPathItemButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPathItemButton.m; sourceTree = "<group>"; };
+		46744E2720E5CC94002BB7A0 /* DCPathButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPathButton.h; sourceTree = "<group>"; };
+		46744E2820E5CC94002BB7A0 /* DCPathCenterButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPathCenterButton.m; sourceTree = "<group>"; };
+		46744E2A20E5CC94002BB7A0 /* DWBubbleMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWBubbleMenuButton.m; sourceTree = "<group>"; };
+		46744E2B20E5CC94002BB7A0 /* DWBubbleMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWBubbleMenuButton.h; sourceTree = "<group>"; };
+		46744E2D20E5CC94002BB7A0 /* MCFireworksButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCFireworksButton.m; sourceTree = "<group>"; };
+		46744E2E20E5CC94002BB7A0 /* MCFireworksView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCFireworksView.m; sourceTree = "<group>"; };
+		46744E2F20E5CC94002BB7A0 /* MCFireworksButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCFireworksButton.h; sourceTree = "<group>"; };
+		46744E3020E5CC94002BB7A0 /* MCFireworksView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCFireworksView.h; sourceTree = "<group>"; };
+		46744E5F20E5FBF3002BB7A0 /* fold.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = fold.caf; sourceTree = "<group>"; };
+		46744E6020E5FBF3002BB7A0 /* selected.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = selected.caf; sourceTree = "<group>"; };
+		46744E6120E5FBF3002BB7A0 /* bloom.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bloom.caf; sourceTree = "<group>"; };
 		4679F2BE20DB70B700265A3E /* LoggerDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoggerDetailViewController.h; sourceTree = "<group>"; };
 		4679F2BF20DB70B700265A3E /* LoggerDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoggerDetailViewController.m; sourceTree = "<group>"; };
 		4679F2C120DB746A00265A3E /* LoggerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoggerViewController.h; sourceTree = "<group>"; };
@@ -902,6 +926,7 @@
 		4643D2A12061021100F871D2 /* Expand */ = {
 			isa = PBXGroup;
 			children = (
+				46744E2020E5CB2C002BB7A0 /* CustomControl */,
 				4683DF2120622D0C005A107D /* Const */,
 				4683DF0B206220BB005A107D /* Network */,
 				4683DEEF20620AE9005A107D /* Tool */,
@@ -936,8 +961,8 @@
 			children = (
 				4673CAAE20610AC3004E5EC5 /* JsHtmlCss */,
 				4673CAAF20610AC3004E5EC5 /* Plist */,
+				46744E5D20E5FBB4002BB7A0 /* Audio */,
 				4673CAB020610AC3004E5EC5 /* Image */,
-				4673CAB120610AC3004E5EC5 /* Audio */,
 				4673CAB220610AC3004E5EC5 /* AppDelegate */,
 				4673CAB320610AC3004E5EC5 /* Global */,
 			);
@@ -970,13 +995,6 @@
 			path = Image;
 			sourceTree = "<group>";
 		};
-		4673CAB120610AC3004E5EC5 /* Audio */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Audio;
-			sourceTree = "<group>";
-		};
 		4673CAB220610AC3004E5EC5 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -998,6 +1016,75 @@
 				4673CAB62061124E004E5EC5 /* XAspect-UIViewController.m */,
 			);
 			path = Global;
+			sourceTree = "<group>";
+		};
+		46744E2020E5CB2C002BB7A0 /* CustomControl */ = {
+			isa = PBXGroup;
+			children = (
+				46744E2120E5CBF9002BB7A0 /* UIButton */,
+			);
+			path = CustomControl;
+			sourceTree = "<group>";
+		};
+		46744E2120E5CBF9002BB7A0 /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				46744E2220E5CC94002BB7A0 /* DCPathButton */,
+				46744E2920E5CC94002BB7A0 /* DWBubbleMenuButton */,
+				46744E2C20E5CC94002BB7A0 /* MCFireworksButton */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
+		46744E2220E5CC94002BB7A0 /* DCPathButton */ = {
+			isa = PBXGroup;
+			children = (
+				46744E2720E5CC94002BB7A0 /* DCPathButton.h */,
+				46744E2420E5CC94002BB7A0 /* DCPathButton.m */,
+				46744E2320E5CC94002BB7A0 /* DCPathItemButton.h */,
+				46744E2620E5CC94002BB7A0 /* DCPathItemButton.m */,
+				46744E2520E5CC94002BB7A0 /* DCPathCenterButton.h */,
+				46744E2820E5CC94002BB7A0 /* DCPathCenterButton.m */,
+			);
+			path = DCPathButton;
+			sourceTree = "<group>";
+		};
+		46744E2920E5CC94002BB7A0 /* DWBubbleMenuButton */ = {
+			isa = PBXGroup;
+			children = (
+				46744E2B20E5CC94002BB7A0 /* DWBubbleMenuButton.h */,
+				46744E2A20E5CC94002BB7A0 /* DWBubbleMenuButton.m */,
+			);
+			path = DWBubbleMenuButton;
+			sourceTree = "<group>";
+		};
+		46744E2C20E5CC94002BB7A0 /* MCFireworksButton */ = {
+			isa = PBXGroup;
+			children = (
+				46744E2F20E5CC94002BB7A0 /* MCFireworksButton.h */,
+				46744E2D20E5CC94002BB7A0 /* MCFireworksButton.m */,
+				46744E3020E5CC94002BB7A0 /* MCFireworksView.h */,
+				46744E2E20E5CC94002BB7A0 /* MCFireworksView.m */,
+			);
+			path = MCFireworksButton;
+			sourceTree = "<group>";
+		};
+		46744E5D20E5FBB4002BB7A0 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				46744E5E20E5FBD7002BB7A0 /* Sounds */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		46744E5E20E5FBD7002BB7A0 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				46744E6120E5FBF3002BB7A0 /* bloom.caf */,
+				46744E5F20E5FBF3002BB7A0 /* fold.caf */,
+				46744E6020E5FBF3002BB7A0 /* selected.caf */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 		4679F2BC20DB705300265A3E /* Logger */ = {
@@ -2510,9 +2597,9 @@
 			isa = PBXGroup;
 			children = (
 				46FFC69B2061F34E0092F6A6 /* CAAnimation+EasingEquations.h */,
+				46FFC69E2061F34E0092F6A6 /* CAAnimation+EasingEquations.m */,
 				46FFC69C2061F34E0092F6A6 /* CAAnimation+Blocks.h */,
 				46FFC69D2061F34E0092F6A6 /* CAAnimation+Blocks.m */,
-				46FFC69E2061F34E0092F6A6 /* CAAnimation+EasingEquations.m */,
 			);
 			path = CAAnimation;
 			sourceTree = "<group>";
@@ -2656,7 +2743,10 @@
 				469B1B1520635259005EDDCD /* Public.xcassets in Resources */,
 				464637EB20889FBD00D38024 /* NSDateTimeAgo.bundle in Resources */,
 				EBF7FD262060EFA400C52DBD /* Assets.xcassets in Resources */,
+				46744E6220E5FBF3002BB7A0 /* fold.caf in Resources */,
 				EBF7FD242060EFA400C52DBD /* Main.storyboard in Resources */,
+				46744E6320E5FBF3002BB7A0 /* selected.caf in Resources */,
+				46744E6420E5FBF3002BB7A0 /* bloom.caf in Resources */,
 				469B1B1420635259005EDDCD /* Preview.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2776,6 +2866,7 @@
 				46B0160F20E4805400ABFAD8 /* FMDBHelper.m in Sources */,
 				4679F2C020DB70B700265A3E /* LoggerDetailViewController.m in Sources */,
 				46FFC6C92061F34E0092F6A6 /* UIResponder+UIAdapt.m in Sources */,
+				46744E3420E5CC94002BB7A0 /* DWBubbleMenuButton.m in Sources */,
 				46FFC7182061F34E0092F6A6 /* UINavigationController+BATransitions.m in Sources */,
 				46FFC6E32061F34E0092F6A6 /* UIView+Debug.m in Sources */,
 				469B1B0E20634B6D005EDDCD /* DelegateCodeStandards.m in Sources */,
@@ -2791,6 +2882,7 @@
 				46FFC70F2061F34E0092F6A6 /* UIViewController+Visible.m in Sources */,
 				46FFC48B2061F1670092F6A6 /* FileLogger.m in Sources */,
 				46FFC6D32061F34E0092F6A6 /* UIColor+Gradient.m in Sources */,
+				46744E3320E5CC94002BB7A0 /* DCPathCenterButton.m in Sources */,
 				4683DF06206219A1005A107D /* LogInApi.m in Sources */,
 				4641D83720D3900900FAADD2 /* AnimationHomeViewController.m in Sources */,
 				46FFC6E12061F34E0092F6A6 /* UIAlertView+Block.m in Sources */,
@@ -2820,6 +2912,7 @@
 				46FFC75D2061F34F0092F6A6 /* NSURLRequest+ParamsFromDictionary.m in Sources */,
 				46FFC78D2061F34F0092F6A6 /* CAShapeLayer+UIBezierPath.m in Sources */,
 				46FFC7032061F34E0092F6A6 /* UIBezierPath+LxThroughPointsBezier.m in Sources */,
+				46744E3620E5CC94002BB7A0 /* MCFireworksView.m in Sources */,
 				46FFC6F92061F34E0092F6A6 /* UITextView+PlaceHolder.m in Sources */,
 				46FFC6BD2061F34E0092F6A6 /* UIScrollView+EmptyDataSet.m in Sources */,
 				462763A420E3508500EAC0A0 /* GroupAnimationViewController.m in Sources */,
@@ -2879,6 +2972,7 @@
 				46FFC7542061F34F0092F6A6 /* NSMutableString+Ruby.m in Sources */,
 				46A87F0120D8D48B00678757 /* KeyFrameAnimationController.m in Sources */,
 				46FFC6BE2061F34E0092F6A6 /* UIScrollView+APParallaxHeader.m in Sources */,
+				46744E3220E5CC94002BB7A0 /* DCPathItemButton.m in Sources */,
 				46FFC6C62061F34E0092F6A6 /* UITableViewCell+TS_delaysContentTouches.m in Sources */,
 				46FFC7682061F34F0092F6A6 /* NSSet+Block.m in Sources */,
 				4665D22720E0FED0009ED006 /* CADisplayLinkViewController.m in Sources */,
@@ -2971,6 +3065,7 @@
 				46FFC74E2061F34F0092F6A6 /* NSString+RemoveEmoji.m in Sources */,
 				46FFC7882061F34F0092F6A6 /* CLLocationManager+Blocks.m in Sources */,
 				46FFC7662061F34F0092F6A6 /* NSTimer+Blocks.m in Sources */,
+				46744E3520E5CC94002BB7A0 /* MCFireworksButton.m in Sources */,
 				46FFC7892061F34F0092F6A6 /* CLLocation+CH1903.m in Sources */,
 				46FFC7302061F34E0092F6A6 /* NSDictionary+Block.m in Sources */,
 				46FFC6D92061F34E0092F6A6 /* WebView+Debug.m in Sources */,
@@ -2980,6 +3075,7 @@
 				4683DEEB2062094C005A107D /* GVUserDefaults.m in Sources */,
 				469B1B1E206388B4005EDDCD /* RunTimeViewController.m in Sources */,
 				46FFC71E2061F34E0092F6A6 /* UITextField+History.m in Sources */,
+				46744E3120E5CC94002BB7A0 /* DCPathButton.m in Sources */,
 				46FFC6F72061F34E0092F6A6 /* UINavigationItem+Loading.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
