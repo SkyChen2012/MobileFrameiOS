@@ -20,6 +20,15 @@
 		464637EC20889FBD00D38024 /* NSDate+Formatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 464637E120889FBC00D38024 /* NSDate+Formatter.m */; };
 		464637ED20889FBD00D38024 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 464637E220889FBC00D38024 /* NSDate+Extension.m */; };
 		464637EE20889FBD00D38024 /* NSDate+CupertinoYankee.m in Sources */ = {isa = PBXBuildFile; fileRef = 464637E420889FBD00D38024 /* NSDate+CupertinoYankee.m */; };
+		4663E49D20E9AFEA003C71ED /* videoRing.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4663E49B20E9AFEA003C71ED /* videoRing.caf */; };
+		4663E49E20E9AFEA003C71ED /* audio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4663E49C20E9AFEA003C71ED /* audio.mp3 */; };
+		4663E4A320E9C903003C71ED /* AudioVideoHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4663E4A220E9C903003C71ED /* AudioVideoHomeViewController.m */; };
+		4663E4A620E9DCAF003C71ED /* AudioToolboxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4663E4A520E9DCAF003C71ED /* AudioToolboxViewController.m */; };
+		4663E4A920E9DD48003C71ED /* AVFoundationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4663E4A820E9DD48003C71ED /* AVFoundationViewController.m */; };
+		4663E4AC20E9EDDA003C71ED /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4663E4AB20E9EDDA003C71ED /* PlayerViewController.m */; };
+		4663E4AF20E9EE02003C71ED /* VideoClipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4663E4AE20E9EE02003C71ED /* VideoClipViewController.m */; };
+		4663E4B220E9EE40003C71ED /* VideoRecordingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4663E4B120E9EE40003C71ED /* VideoRecordingViewController.m */; };
+		4663E4B820EA0C2A003C71ED /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4663E4B720EA0C2A003C71ED /* MoreViewController.m */; };
 		4665D21E20E0FE39009ED006 /* ProtocolOptionalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4665D21D20E0FE39009ED006 /* ProtocolOptionalViewController.m */; };
 		4665D22120E0FE73009ED006 /* BlockLoopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4665D22020E0FE73009ED006 /* BlockLoopViewController.m */; };
 		4665D22420E0FEA4009ED006 /* DataSourceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4665D22320E0FEA4009ED006 /* DataSourceViewController.m */; };
@@ -326,6 +335,22 @@
 		464637E520889FBD00D38024 /* NSDate+Reporting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Reporting.h"; sourceTree = "<group>"; };
 		464637E620889FBD00D38024 /* NSDate+InternetDateTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+InternetDateTime.h"; sourceTree = "<group>"; };
 		464637EF2088A09D00D38024 /* NSDate+Utilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utilities.h"; sourceTree = "<group>"; };
+		4663E49B20E9AFEA003C71ED /* videoRing.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = videoRing.caf; sourceTree = "<group>"; };
+		4663E49C20E9AFEA003C71ED /* audio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio.mp3; sourceTree = "<group>"; };
+		4663E4A120E9C903003C71ED /* AudioVideoHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioVideoHomeViewController.h; sourceTree = "<group>"; };
+		4663E4A220E9C903003C71ED /* AudioVideoHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioVideoHomeViewController.m; sourceTree = "<group>"; };
+		4663E4A420E9DCAF003C71ED /* AudioToolboxViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioToolboxViewController.h; sourceTree = "<group>"; };
+		4663E4A520E9DCAF003C71ED /* AudioToolboxViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioToolboxViewController.m; sourceTree = "<group>"; };
+		4663E4A720E9DD48003C71ED /* AVFoundationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVFoundationViewController.h; sourceTree = "<group>"; };
+		4663E4A820E9DD48003C71ED /* AVFoundationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVFoundationViewController.m; sourceTree = "<group>"; };
+		4663E4AA20E9EDDA003C71ED /* PlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
+		4663E4AB20E9EDDA003C71ED /* PlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
+		4663E4AD20E9EE02003C71ED /* VideoClipViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoClipViewController.h; sourceTree = "<group>"; };
+		4663E4AE20E9EE02003C71ED /* VideoClipViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoClipViewController.m; sourceTree = "<group>"; };
+		4663E4B020E9EE40003C71ED /* VideoRecordingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoRecordingViewController.h; sourceTree = "<group>"; };
+		4663E4B120E9EE40003C71ED /* VideoRecordingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoRecordingViewController.m; sourceTree = "<group>"; };
+		4663E4B620EA0C2A003C71ED /* MoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
+		4663E4B720EA0C2A003C71ED /* MoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 		4665D21C20E0FE39009ED006 /* ProtocolOptionalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProtocolOptionalViewController.h; sourceTree = "<group>"; };
 		4665D21D20E0FE39009ED006 /* ProtocolOptionalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProtocolOptionalViewController.m; sourceTree = "<group>"; };
 		4665D21F20E0FE73009ED006 /* BlockLoopViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockLoopViewController.h; sourceTree = "<group>"; };
@@ -943,6 +968,51 @@
 			path = SDKFile;
 			sourceTree = "<group>";
 		};
+		4663E49A20E9AF73003C71ED /* testAudio */ = {
+			isa = PBXGroup;
+			children = (
+				4663E49C20E9AFEA003C71ED /* audio.mp3 */,
+				4663E49B20E9AFEA003C71ED /* videoRing.caf */,
+			);
+			path = testAudio;
+			sourceTree = "<group>";
+		};
+		4663E49F20E9C87B003C71ED /* Function */ = {
+			isa = PBXGroup;
+			children = (
+				4663E4A020E9C887003C71ED /* AudioVideofunc */,
+			);
+			path = Function;
+			sourceTree = "<group>";
+		};
+		4663E4A020E9C887003C71ED /* AudioVideofunc */ = {
+			isa = PBXGroup;
+			children = (
+				4663E4A120E9C903003C71ED /* AudioVideoHomeViewController.h */,
+				4663E4A220E9C903003C71ED /* AudioVideoHomeViewController.m */,
+				4663E4A420E9DCAF003C71ED /* AudioToolboxViewController.h */,
+				4663E4A520E9DCAF003C71ED /* AudioToolboxViewController.m */,
+				4663E4A720E9DD48003C71ED /* AVFoundationViewController.h */,
+				4663E4A820E9DD48003C71ED /* AVFoundationViewController.m */,
+				4663E4AA20E9EDDA003C71ED /* PlayerViewController.h */,
+				4663E4AB20E9EDDA003C71ED /* PlayerViewController.m */,
+				4663E4AD20E9EE02003C71ED /* VideoClipViewController.h */,
+				4663E4AE20E9EE02003C71ED /* VideoClipViewController.m */,
+				4663E4B020E9EE40003C71ED /* VideoRecordingViewController.h */,
+				4663E4B120E9EE40003C71ED /* VideoRecordingViewController.m */,
+			);
+			path = AudioVideofunc;
+			sourceTree = "<group>";
+		};
+		4663E4B520EA0C1B003C71ED /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4663E4B620EA0C2A003C71ED /* MoreViewController.h */,
+				4663E4B720EA0C2A003C71ED /* MoreViewController.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		466C041220648E1400CF5383 /* Multithread */ = {
 			isa = PBXGroup;
 			children = (
@@ -1072,6 +1142,7 @@
 		46744E5D20E5FBB4002BB7A0 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				4663E49A20E9AF73003C71ED /* testAudio */,
 				46744E5E20E5FBD7002BB7A0 /* Sounds */,
 			);
 			path = Audio;
@@ -1261,8 +1332,8 @@
 		4683DEFC2062118F005A107D /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				4663E4B520EA0C1B003C71ED /* View */,
 				469B1B0220633B2F005EDDCD /* Controller */,
-				469B1B0120633B28005EDDCD /* View */,
 				469B1B0020633B22005EDDCD /* Model */,
 				469B1AFF20633B1B005EDDCD /* Server */,
 				469B1AFE20633B12005EDDCD /* other */,
@@ -1449,16 +1520,10 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		469B1B0120633B28005EDDCD /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		469B1B0220633B2F005EDDCD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				4663E49F20E9C87B003C71ED /* Function */,
 				469B1AF8206338EB005EDDCD /* PubHomeViewController.h */,
 				469B1AF9206338EB005EDDCD /* PubHomeViewController.m */,
 				469B1AFB206339A3005EDDCD /* PubBaseNavigationController.h */,
@@ -2739,8 +2804,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBF7FD292060EFA400C52DBD /* LaunchScreen.storyboard in Resources */,
+				4663E49E20E9AFEA003C71ED /* audio.mp3 in Resources */,
 				469B1B1720635284005EDDCD /* Media.xcassets in Resources */,
 				469B1B1520635259005EDDCD /* Public.xcassets in Resources */,
+				4663E49D20E9AFEA003C71ED /* videoRing.caf in Resources */,
 				464637EB20889FBD00D38024 /* NSDateTimeAgo.bundle in Resources */,
 				EBF7FD262060EFA400C52DBD /* Assets.xcassets in Resources */,
 				46744E6220E5FBF3002BB7A0 /* fold.caf in Resources */,
@@ -2801,6 +2868,7 @@
 				462763AD20E350FA00EAC0A0 /* TransitionformAnimationViewController.m in Sources */,
 				46FFC74C2061F34F0092F6A6 /* NSString+Pinyin.m in Sources */,
 				46FFC6DC2061F34E0092F6A6 /* UIWebView+JS.m in Sources */,
+				4663E4A320E9C903003C71ED /* AudioVideoHomeViewController.m in Sources */,
 				46FFC7532061F34F0092F6A6 /* NSString+UrlEncode.m in Sources */,
 				46FFC73E2061F34E0092F6A6 /* NSData+SDDataCache.m in Sources */,
 				46FFC6DE2061F34E0092F6A6 /* UIWebView+Canvas.m in Sources */,
@@ -2814,6 +2882,7 @@
 				46FFC73C2061F34E0092F6A6 /* NSData+APNSToken.m in Sources */,
 				46FFC6D82061F34E0092F6A6 /* UIWebVIew+SwipeGesture.m in Sources */,
 				4683DF18206228C9005A107D /* HomeViewController.m in Sources */,
+				4663E4B220E9EE40003C71ED /* VideoRecordingViewController.m in Sources */,
 				46FFC6FC2061F34E0092F6A6 /* UIDevice+JKHardware.m in Sources */,
 				4665D21E20E0FE39009ED006 /* ProtocolOptionalViewController.m in Sources */,
 				469B1AFA206338EB005EDDCD /* PubHomeViewController.m in Sources */,
@@ -2841,6 +2910,7 @@
 				46FFC71A2061F34E0092F6A6 /* UISearchBar+Blocks.m in Sources */,
 				46B0161520E4A93B00ABFAD8 /* Car.m in Sources */,
 				46FFC6EF2061F34E0092F6A6 /* UIView+Find.m in Sources */,
+				4663E4A620E9DCAF003C71ED /* AudioToolboxViewController.m in Sources */,
 				46FFC7612061F34F0092F6A6 /* NSNumber+Round.m in Sources */,
 				46FFC72E2061F34E0092F6A6 /* NSDictionary+URL.m in Sources */,
 				46FFC7832061F34F0092F6A6 /* NSFetchRequest+Extensions.m in Sources */,
@@ -2868,6 +2938,7 @@
 				46FFC6C92061F34E0092F6A6 /* UIResponder+UIAdapt.m in Sources */,
 				46744E3420E5CC94002BB7A0 /* DWBubbleMenuButton.m in Sources */,
 				46FFC7182061F34E0092F6A6 /* UINavigationController+BATransitions.m in Sources */,
+				4663E4AF20E9EE02003C71ED /* VideoClipViewController.m in Sources */,
 				46FFC6E32061F34E0092F6A6 /* UIView+Debug.m in Sources */,
 				469B1B0E20634B6D005EDDCD /* DelegateCodeStandards.m in Sources */,
 				46FFC7492061F34E0092F6A6 /* NSString+RegexCategory.m in Sources */,
@@ -2938,6 +3009,7 @@
 				46FFC48E2061F1B00092F6A6 /* LoggerForMatter.m in Sources */,
 				46FFC7312061F34E0092F6A6 /* NSDictionary+SafeAccess.m in Sources */,
 				46FFC78E2061F34F0092F6A6 /* CALayer+UIColor.m in Sources */,
+				4663E4B820EA0C2A003C71ED /* MoreViewController.m in Sources */,
 				46FFC6D72061F34E0092F6A6 /* UIColor+Modify.m in Sources */,
 				46FFC7122061F34E0092F6A6 /* UIViewController+MJPopupViewController.m in Sources */,
 				46FFC7172061F34E0092F6A6 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
@@ -2968,6 +3040,7 @@
 				46FFC6DA2061F34E0092F6A6 /* UIWebView+Style.m in Sources */,
 				46FFC78C2061F34F0092F6A6 /* CAAnimation+EasingEquations.m in Sources */,
 				4679F2CF20DB9A8000265A3E /* MBProgressHUD+XX.m in Sources */,
+				4663E4A920E9DD48003C71ED /* AVFoundationViewController.m in Sources */,
 				46FFC6F22061F34E0092F6A6 /* UIView+Toast.m in Sources */,
 				46FFC7542061F34F0092F6A6 /* NSMutableString+Ruby.m in Sources */,
 				46A87F0120D8D48B00678757 /* KeyFrameAnimationController.m in Sources */,
@@ -3059,6 +3132,7 @@
 				46FFC7572061F34F0092F6A6 /* NSString+Size.m in Sources */,
 				46FFC6C02061F34E0092F6A6 /* UIScreen+Frame.m in Sources */,
 				46FFC6CF2061F34E0092F6A6 /* UIButton+Submitting.m in Sources */,
+				4663E4AC20E9EDDA003C71ED /* PlayerViewController.m in Sources */,
 				46FFC7332061F34E0092F6A6 /* NSDictionary+Merge.m in Sources */,
 				46FFC71C2061F34E0092F6A6 /* UIControl+ActionBlocks.m in Sources */,
 				46FFC76C2061F34F0092F6A6 /* NSObject+KVOBlocks.m in Sources */,

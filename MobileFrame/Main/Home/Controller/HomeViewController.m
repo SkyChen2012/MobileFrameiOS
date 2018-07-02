@@ -11,7 +11,6 @@
 #import <React/RCTRootView.h>
 
 #import "UIColor+Gradient.h"
-#import "UIColor+Random.h"
 
 @interface HomeViewController ()
 
@@ -48,7 +47,7 @@
 - (void)buttonClick:(UIButton *)button{
     
     NSLog(@"High Score Button Pressed");
-    NSURL *jsCodeLocation = [NSURL URLWithString:@"http://192.168.1.126:8081/index.ios.bundle?platform=ios"];
+    NSURL *jsCodeLocation = [NSURL URLWithString:@"http://192.168.1.108:8081/index.ios.bundle?platform=ios"];
     RCTRootView *rootView =[[RCTRootView alloc] initWithBundleURL : jsCodeLocation
                                                 moduleName        : @"MyReactNativeApp"
                                                 initialProperties : @{

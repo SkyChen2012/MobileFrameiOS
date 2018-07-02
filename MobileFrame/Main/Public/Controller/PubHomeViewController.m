@@ -13,6 +13,7 @@
 #import "HomeViewController.h"
 #import "TheoryViewController.h"
 #import "LoginViewController.h"
+#import "MoreViewController.h"
 
 #import "DiscoveryViewController.h"
 @interface PubHomeViewController ()
@@ -79,7 +80,7 @@
                                        firstTabBarItemsAttributes,
                                        secondTabBarItemsAttributes,
 //                                       thirdTabBarItemsAttributes,
-//                                       fourthTabBarItemsAttributes
+                                       fourthTabBarItemsAttributes,
                                        fiveTabBarItemsAttributes
                                        ];
     return tabBarItemsAttributes;
@@ -103,16 +104,16 @@
 //    UMengSocialViewController *thirdViewController = [[UMengSocialViewController alloc] init];
 //    UINavigationController *thirdNavigationController = [[MPBaseNavigationController alloc]
 //                                                         initWithRootViewController:thirdViewController];
-//    
-//    MPMoreViewController *fourthViewController = [[MPMoreViewController alloc] init];
-//    UINavigationController *fourthNavigationController = [[MPBaseNavigationController alloc]
-//                                                          initWithRootViewController:fourthViewController];
+    
+    MoreViewController *fourthViewController = [[MoreViewController alloc] init];
+    UINavigationController *fourthNavigationController = [[PubBaseNavigationController alloc]
+                                                          initWithRootViewController:fourthViewController];
 
     NSArray *viewControllers = @[
                                  firstNavigationController,
                                  secondNavigationController,
 //                                 thirdNavigationController,
-//                                 fourthNavigationController,
+                                 fourthNavigationController,
                                  fiveNavigationController
                                  ];
     

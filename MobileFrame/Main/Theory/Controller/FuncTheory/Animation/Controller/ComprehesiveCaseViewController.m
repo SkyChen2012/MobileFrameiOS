@@ -74,12 +74,8 @@
     // Configure center button
     _pathAnimationView = [[DCPathButton alloc]initWithCenterImage:[UIImage imageNamed:@"chooser-button-tab"]
                                                            hilightedImage:[UIImage imageNamed:@"chooser-button-tab-highlighted"]];
-
-    
     _pathAnimationView.delegate = self;
-    
     // Configure item buttons
-    //
     DCPathItemButton *itemButton_1 = [[DCPathItemButton alloc]initWithImage:[UIImage imageNamed:@"chooser-moment-icon-music"]
                                                            highlightedImage:[UIImage imageNamed:@"chooser-moment-icon-music-highlighted"]
                                                             backgroundImage:[UIImage imageNamed:@"chooser-moment-button"]
@@ -106,7 +102,6 @@
                                                  backgroundHighlightedImage:[UIImage imageNamed:@"chooser-moment-button-highlighted"]];
     
     // Add the item button into the center button
-    //
     [_pathAnimationView addPathItems:@[itemButton_1, itemButton_2, itemButton_3, itemButton_4, itemButton_5]];
     
     [self.view addSubview:_pathAnimationView];
