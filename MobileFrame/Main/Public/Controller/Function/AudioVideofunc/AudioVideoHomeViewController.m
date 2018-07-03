@@ -37,7 +37,7 @@
 
 -(void)initView{
     
-    if (_myTableView) {
+    if (!_myTableView) {
         _myTableView = [[UITableView alloc] initWithFrame:CGRectMake(0,0.5, Main_Screen_Width, Main_Screen_Height) style:UITableViewStylePlain];
         _myTableView.dataSource = self;
         _myTableView.delegate = self;

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4612966D20EB40BB00144911 /* NetBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4612966C20EB40BB00144911 /* NetBase.m */; };
+		4612967020EB5DB500144911 /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4612966F20EB5DB500144911 /* LoginModel.m */; };
 		462763A420E3508500EAC0A0 /* GroupAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 462763A320E3508500EAC0A0 /* GroupAnimationViewController.m */; };
 		462763AA20E350D800EAC0A0 /* AffineTransfromAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 462763A920E350D800EAC0A0 /* AffineTransfromAnimationViewController.m */; };
 		462763AD20E350FA00EAC0A0 /* TransitionformAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 462763AC20E350FA00EAC0A0 /* TransitionformAnimationViewController.m */; };
@@ -310,6 +312,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4612966B20EB40BB00144911 /* NetBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetBase.h; sourceTree = "<group>"; };
+		4612966C20EB40BB00144911 /* NetBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetBase.m; sourceTree = "<group>"; };
+		4612966E20EB5DB500144911 /* LoginModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginModel.h; sourceTree = "<group>"; };
+		4612966F20EB5DB500144911 /* LoginModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginModel.m; sourceTree = "<group>"; };
 		462763A220E3508500EAC0A0 /* GroupAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroupAnimationViewController.h; sourceTree = "<group>"; };
 		462763A320E3508500EAC0A0 /* GroupAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroupAnimationViewController.m; sourceTree = "<group>"; };
 		462763A820E350D800EAC0A0 /* AffineTransfromAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AffineTransfromAnimationViewController.h; sourceTree = "<group>"; };
@@ -918,6 +924,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4612966A20EB408A00144911 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				4612966B20EB40BB00144911 /* NetBase.h */,
+				4612966C20EB40BB00144911 /* NetBase.m */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
 		463D6C7120D0F2F600482FD2 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -1334,8 +1349,8 @@
 			children = (
 				4663E4B520EA0C1B003C71ED /* View */,
 				469B1B0220633B2F005EDDCD /* Controller */,
+				4612966A20EB408A00144911 /* Server */,
 				469B1B0020633B22005EDDCD /* Model */,
-				469B1AFF20633B1B005EDDCD /* Server */,
 				469B1AFE20633B12005EDDCD /* other */,
 			);
 			path = Public;
@@ -1506,13 +1521,6 @@
 			path = other;
 			sourceTree = "<group>";
 		};
-		469B1AFF20633B1B005EDDCD /* Server */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Server;
-			sourceTree = "<group>";
-		};
 		469B1B0020633B22005EDDCD /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -1616,6 +1624,8 @@
 		46B2023320D9FD6800C28C19 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4612966E20EB5DB500144911 /* LoginModel.h */,
+				4612966F20EB5DB500144911 /* LoginModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2934,6 +2944,7 @@
 				46FFC6DB2061F34E0092F6A6 /* UIWebView+Load.m in Sources */,
 				464637E920889FBD00D38024 /* NSDate+InternetDateTime.m in Sources */,
 				46B0160F20E4805400ABFAD8 /* FMDBHelper.m in Sources */,
+				4612966D20EB40BB00144911 /* NetBase.m in Sources */,
 				4679F2C020DB70B700265A3E /* LoggerDetailViewController.m in Sources */,
 				46FFC6C92061F34E0092F6A6 /* UIResponder+UIAdapt.m in Sources */,
 				46744E3420E5CC94002BB7A0 /* DWBubbleMenuButton.m in Sources */,
@@ -3020,6 +3031,7 @@
 				46FFC7862061F34F0092F6A6 /* MKMapView+MoveLogo.m in Sources */,
 				46FFC7462061F34E0092F6A6 /* NSString+XML.m in Sources */,
 				46FFC6AB2061F34E0092F6A6 /* UIImage+RemoteSize.m in Sources */,
+				4612967020EB5DB500144911 /* LoginModel.m in Sources */,
 				46FFC7472061F34E0092F6A6 /* NSString+Hash.m in Sources */,
 				46FFC7022061F34E0092F6A6 /* UIBezierPath+Symbol.m in Sources */,
 				46FFC6B62061F34E0092F6A6 /* UIImage+RoundedCorner.m in Sources */,

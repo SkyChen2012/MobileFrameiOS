@@ -8,11 +8,13 @@
 
 #import "MoreViewController.h"
 
+#import "AudioVideoHomeViewController.h"
+
 @interface MoreViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic ,strong ) NSArray  *dataArray;
 @property (nonatomic ,strong ) UITableView  *tableView; 
-
+ 
 @end
 
 @implementation MoreViewController
@@ -25,15 +27,19 @@
     [self initView];
     
 }
-
+    
 
 - (void)initData{
-    _dataArray = [NSArray arrayWithObjects:@"AudioVideofunc", nil];
+    if (!_dataArray) {
+        _dataArray = @[@"AudioVideofunc"];
+    }
 }
 
 - (void)initView{
     
-    if (_tableView) {
+    self.view.backgroundColor=[UIColor clearColor];
+    
+    if (!_tableView) {
         _tableView                                = [[UITableView alloc] initWithFrame:CGRectMake(0,0.5, Main_Screen_Width, Main_Screen_Height) style:UITableViewStylePlain];
         _tableView.showsVerticalScrollIndicator   = NO;
         _tableView.showsHorizontalScrollIndicator = NO;
@@ -60,24 +66,42 @@
 #pragma mark 每当有一个cell进入桌面 调用方法，返回当前行的cell
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //0.设置标识符
-    static NSString *ID = @"moreView";
-    //1.根据标识符在缓存池中复用uitableviewcell
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: ID];
-    //2.如果cell为空，重新创建一个带有标识符的uitableviewcell
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier: ID];
+
+    NSString *CellIdentifier = [NSString stringWithFormat:@"Cell%ld%ld", [indexPath section], [indexPath row]];//以indexPath来唯一确定cell 
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier]; //出列可重用的cell 
+    if (cell == nil) { 
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier]; 
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
-    //3.覆盖数据
-    cell.textLabel.text = _dataArray[indexPath.row];
+    
+    cell.accessoryType    = UITableViewCellAccessoryDisclosureIndicator;
+    cell.textLabel.text   = self.dataArray[indexPath.row];
+    cell.backgroundColor = [UIColor RandomColor];
+    
     return cell;
+    
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    UIViewController *vc;
+    
+    switch (indexPath.row) {
+        case 0:
+            vc = [[AudioVideoHomeViewController alloc] init];
+            break;
+            
+        default:
+            break;
+    }
+    
+    if (vc) {
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+
 }
-
-
 
 
 - (void)didReceiveMemoryWarning {

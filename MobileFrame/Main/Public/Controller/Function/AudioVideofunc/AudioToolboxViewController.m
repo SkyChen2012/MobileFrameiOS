@@ -40,17 +40,31 @@
 
 -(void)initView{
     
-    if (_playBtn) {
-        _playBtn = [[UIButton alloc] initWithFrame:CGRectMake(50, 50, 20, 20)];
-        [_playBtn setImage:[UIImage imageNamed:@"player_play"] forState:UIControlStateNormal];
-        [_playBtn addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
-    }
+    [self.view addSubview:self.playBtn];
+    [self.playBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(20);
+        make.right.mas_equalTo(-20);
+        make.bottom.mas_equalTo(-150);
+        make.height.mas_equalTo(30);
+    }];
     
 }
 
+-(UIButton *)playBtn{
+    if (!_playBtn) {
+        _playBtn=[[UIButton alloc]init];
+        _playBtn.backgroundColor=[UIColor grayColor];
+        _playBtn.tag=1;
+        [_playBtn setTitle:@"开始" forState:UIControlStateNormal];
+        [_playBtn addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _playBtn;
+}
+
+
 -(void)onClick:(UIButton *)btn{
     
-    [self playSoundEffect:@"videoRing.caf"];
+    [self playSoundEffect:@"videoRing"];
 }
 
 
@@ -71,7 +85,7 @@ void soundCompleteCallback(SystemSoundID soundID,void * clientData){
  *  @param name 音频文件名称
  */
 -(void)playSoundEffect:(NSString *)name{
-    NSString *audioFile=[[NSBundle mainBundle] pathForResource:name ofType:nil];
+    NSString *audioFile=[[NSBundle mainBundle] pathForResource:name ofType:@"caf"];
     NSURL *fileUrl=[NSURL fileURLWithPath:audioFile];
     //1.获得系统声音ID
     SystemSoundID soundID=0;
@@ -83,8 +97,9 @@ void soundCompleteCallback(SystemSoundID soundID,void * clientData){
     //如果需要在播放完之后执行某些操作，可以调用如下方法注册一个播放完成回调函数
     AudioServicesAddSystemSoundCompletion(soundID, NULL, NULL, soundCompleteCallback, NULL);
     //2.播放音频
-    AudioServicesPlaySystemSound(soundID);//播放音效
-    //    AudioServicesPlayAlertSound(soundID);//播放音效并震动
+//    AudioServicesPlaySystemSound(soundID);//播放音效
+    AudioServicesPlayAlertSound(soundID);//播放音效并震动
+    
 }
 
 

@@ -36,47 +36,14 @@
     
     //登录成功后跳转到首页
 //    
-    
-    //测试登录及网络请求
-//    LogInApi *reg = [[LogInApi alloc] initWithUsername:@"username" password:@"password"];
-//    [reg startWithCompletionBlockWithSuccess:^(YTKBaseRequest *request) {
-//        NSLog(@"状态码%ld",request.responseStatusCode);
-//        LoginModel *model=[[LoginModel alloc]initWithString:request.responseString error:nil];
-//        NSLog(@"响应内容:%@",model.access_token);
-//        //成功登录 跳转到首页
-//        [((AppDelegate*)AppDelegateInstance) setupHomeViewController];
-//        
-//    } failure:^(YTKBaseRequest *request) {
-//        NSLog(@"Error");
-//    }];
-    
 }
 
 - (void)setupViews{
-    
-    _accountTextField = [[UITextField alloc] init];  
-    _accountTextField.backgroundColor = [UIColor RandomColor];  
-    _accountTextField.placeholder = @"账号";  
-    [self.view addSubview:_accountTextField];  
-    
-    _secretTextField = [[UITextField alloc] init];  
-    _secretTextField.backgroundColor = [UIColor RandomColor];  
-    _secretTextField.placeholder = @"密码"; 
-    [self.view addSubview:_secretTextField];
-    
-    _loginButton = [[UIButton alloc] init];  
-    _loginButton.backgroundColor = [UIColor RandomColor];  
-    [_loginButton setTitle:@"Login" forState:UIControlStateNormal];
-    _loginButton.tag = 1;
-    [_loginButton addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:_loginButton];
-    
-    _clearButton = [[UIButton alloc] init];
-    _clearButton.backgroundColor = [UIColor RandomColor];
-    [_clearButton setTitle:@"Clear" forState:UIControlStateNormal];
-    _clearButton.tag = 2;
-    [_clearButton addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:_clearButton];
+     
+    [self.view addSubview:self.accountTextField];  
+    [self.view addSubview:self.secretTextField];
+    [self.view addSubview:self.loginButton];
+    [self.view addSubview:self.clearButton];
     
     [_accountTextField mas_makeConstraints:^(MASConstraintMaker *make) {  
         make.left.equalTo(self.view.mas_left).offset(50);  
@@ -150,6 +117,50 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (UITextField *)accountTextField{
+    
+    if (!_accountTextField) {
+        _accountTextField = [[UITextField alloc] init];  
+        _accountTextField.backgroundColor = [UIColor RandomColor];  
+        _accountTextField.placeholder = @"账号";
+    }
+    return _accountTextField;
+}
+
+- (UITextField *)secretTextField{
+    if (!_secretTextField) {
+        _secretTextField = [[UITextField alloc] init];  
+        _secretTextField.backgroundColor = [UIColor RandomColor];  
+        _secretTextField.placeholder = @"密码";
+    }
+    return _secretTextField;
+}
+
+- (UIButton *)loginButton{
+    
+    if (!_loginButton) {
+        _loginButton = [[UIButton alloc] init];  
+        _loginButton.backgroundColor = [UIColor RandomColor];  
+        [_loginButton setTitle:@"Login" forState:UIControlStateNormal];
+        _loginButton.tag = 1;
+        [_loginButton addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _loginButton;
+}
+
+- (UIButton *)clearButton{
+    
+    if (!_clearButton) {
+        _clearButton = [[UIButton alloc] init];
+        _clearButton.backgroundColor = [UIColor RandomColor];
+        [_clearButton setTitle:@"Clear" forState:UIControlStateNormal];
+        _clearButton.tag = 2;
+        [_clearButton addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _clearButton;
+}
+
 
 
 @end
