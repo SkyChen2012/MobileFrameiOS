@@ -27,15 +27,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
-    _LoginPresenter = [[LoginPresenterCompl alloc] initWithView:self];
-    
+    _LoginPresenter = [[LoginPresenterCompl alloc] initWithView:self];    
     [self setupViews];
-    
-    
-    //登录成功后跳转到首页
-//    
+      
 }
 
 - (void)setupViews{
@@ -77,13 +72,13 @@
 -(void) onClick:(UIButton *) btn{
     switch (btn.tag) {
         case 1:
-            NSLog(@"login");
+            DDLogVerbose(@"login");
             _accountTextField.enabled = NO;
             _secretTextField.enabled = NO;
             [_LoginPresenter doLoginWithName:_accountTextField.text Passwd:_secretTextField.text];
             break;
         case 2:
-            NSLog(@"clear");
+            DDLogVerbose(@"clear");
             _accountTextField.enabled = YES;
             _secretTextField.enabled = YES;
             [_LoginPresenter clear];
@@ -99,7 +94,7 @@
 }
 - (void)onLoginResult:(Boolean) result code:(int) code{
     
-    NSLog(@"onLoginResult  result = %d,code = %d",result,code);
+    DDLogVerbose(@"onLoginResult  result = %d,code = %d",result,code);
     
     if (result == YES) {
         [((AppDelegate*) AppDelegateInstance) setupHomeViewController];
@@ -108,7 +103,7 @@
     
 }
 - (void)onSetProgressBarVisibility:(int) visibility{
-    NSLog(@"onSetProgressBarVisibility");
+    DDLogVerbose(@"onSetProgressBarVisibility");
 
 }
 

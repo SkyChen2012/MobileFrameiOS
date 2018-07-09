@@ -19,7 +19,7 @@
 
 
 + (void)showAddressInfo{
-    NSLog(@"当前地址为杭州");
+    DDLogInfo(@"当前地址为杭州");
 }
 
 -(NSString *)showUserName:(NSString *)name{

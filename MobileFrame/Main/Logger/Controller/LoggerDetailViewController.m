@@ -60,18 +60,18 @@
     switch (result)
     {
         case MFMailComposeResultCancelled:
-            NSLog(@"Mail send canceled...");
+            DDLogInfo(@"Mail send canceled...");
             break;
         case MFMailComposeResultSaved:
-            NSLog(@"Mail saved...");
+            DDLogInfo(@"Mail saved...");
             
             break;
         case MFMailComposeResultSent:
-            NSLog(@"Mail sent...");
+            DDLogInfo(@"Mail sent...");
             [MBProgressHUD showSuccess:@"发送邮件成功" ToView:self.view];
             break;
         case MFMailComposeResultFailed:
-            NSLog(@"Mail send errored: %@...", [error localizedDescription]);
+            DDLogInfo(@"Mail send errored: %@...", [error localizedDescription]);
             [MBProgressHUD showError:@"发送邮件失败" ToView:self.view];
             break;
         default:

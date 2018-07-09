@@ -169,7 +169,7 @@
         _audioPlayer.delegate=self;
         [_audioPlayer prepareToPlay];//加载音频文件到缓存
         if(error){
-            NSLog(@"初始化播放器过程发生错误,错误信息:%@",error.localizedDescription);
+            DDLogInfo(@"初始化播放器过程发生错误,错误信息:%@",error.localizedDescription);
             return nil;
         }
         
@@ -259,7 +259,7 @@
     }
     
     //    [dic enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-    //        NSLog(@"%@:%@",key,obj);
+    //        DDLogInfo(@"%@:%@",key,obj);
     //    }];
 }
 
@@ -270,7 +270,7 @@
 
 #pragma mark - 播放器代理方法
 -(void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag{
-    NSLog(@"音乐播放完成...");
+    DDLogInfo(@"音乐播放完成...");
 }
 
 /*

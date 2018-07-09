@@ -41,6 +41,9 @@ pod 'MBProgressHUD', '~> 1.1.0'
 
 pod 'JSONModel', '~> 1.7.0'
 
+# Email 
+pod 'skpsmtpmessage', '~> 0.0.1'
+
 # 'node_modules'目录一般位于根目录中
 # 但是如果你的结构不同，那你就要根据实际路径修改下面的`:path`
 pod 'React', :path => '../AppReactNativeFrameServer/node_modules/react-native', :subspecs => [

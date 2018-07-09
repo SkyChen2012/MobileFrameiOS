@@ -19,7 +19,7 @@
 
 AspectPatch(-, void, viewDidLoad){
     
-    NSLog(@"[Benson]: %@'s view did load.", NSStringFromClass([self class]));
+    DDLogInfo(@"[Benson]: %@'s view did load.", NSStringFromClass([self class]));
     
     return XAMessageForward(viewDidLoad);
 }

@@ -88,11 +88,11 @@
 }
 
 -(void)animationDidStart:(CAAnimation *)anim{
-    NSLog(@"开始动画");
+    DDLogInfo(@"开始动画");
 }
 
 -(void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
-    NSLog(@"结束动画");
+    DDLogInfo(@"结束动画");
 }
 
 - (void)didReceiveMemoryWarning {

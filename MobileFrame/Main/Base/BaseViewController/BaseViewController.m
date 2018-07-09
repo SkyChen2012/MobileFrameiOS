@@ -104,17 +104,17 @@
 
 //通知监听回调 网络状态发送改变 系统会发出一个kReachabilityChangedNotification通知，然后会触发此回调方法
 - (void)netStatusChange:(NSNotification *)noti{
-//    NSLog(@"-----%@",noti.userInfo);
+//    DDLogInfo(@"-----%@",noti.userInfo);
     //判断网络状态
     switch (self.hostReach.currentReachabilityStatus) {
         case NotReachable:
-            NSLog(@"[MBProgressHUD showInfo:@\"当前网络连接失败，请查看设置\" ToView:self.view];");
+            DDLogInfo(@"[MBProgressHUD showInfo:@\"当前网络连接失败，请查看设置\" ToView:self.view];");
             break;
         case ReachableViaWiFi:
-            NSLog(@"wifi上网");
+            DDLogInfo(@"wifi上网");
             break;
         case ReachableViaWWAN:
-            NSLog(@"手机上网");
+            DDLogInfo(@"手机上网");
             break;
         default:
             break;

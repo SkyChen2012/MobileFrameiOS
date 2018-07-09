@@ -75,6 +75,7 @@ PODS:
     - React/Core
     - React/fishhook
     - React/RCTBlob
+  - skpsmtpmessage (0.0.1)
   - XAspect (1.0.5):
     - XAspect/Core (= 1.0.5)
     - XAspect/Macros (= 1.0.5)
@@ -105,6 +106,7 @@ DEPENDENCIES:
   - React/RCTNetwork (from `../AppReactNativeFrameServer/node_modules/react-native`)
   - React/RCTText (from `../AppReactNativeFrameServer/node_modules/react-native`)
   - React/RCTWebSocket (from `../AppReactNativeFrameServer/node_modules/react-native`)
+  - skpsmtpmessage (~> 0.0.1)
   - XAspect
   - yoga (from `../AppReactNativeFrameServer/node_modules/react-native/ReactCommon/yoga`)
   - YTKNetwork (~> 2.0.4)
@@ -123,6 +125,7 @@ SPEC REPOS:
     - Masonry
     - MBProgressHUD
     - MQTTClient
+    - skpsmtpmessage
     - XAspect
     - YTKNetwork
 
@@ -155,10 +158,11 @@ SPEC CHECKSUMS:
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MQTTClient: eea2eaaa6ddef852a1019a4dda091e22ad928b58
   React: c237e42de9c70e5cac6eeb52b4cfd3a0910c1f00
+  skpsmtpmessage: f6e913380c784dd8d4a9f83c8790a302445a5e05
   XAspect: db50bf487f92dbb8557a7a5365556966c8493af8
   yoga: 55da126afc384965b96bff46652464373b330add
   YTKNetwork: df8a7a5597bda1664a4efaa7ef871a818a887fe0
 
-PODFILE CHECKSUM: 31ab8945beb2379f67d41f9c7141c3761e2536d8
+PODFILE CHECKSUM: 999e101d882f156a721f44262444787e8ba66a7a
 
 COCOAPODS: 1.5.3

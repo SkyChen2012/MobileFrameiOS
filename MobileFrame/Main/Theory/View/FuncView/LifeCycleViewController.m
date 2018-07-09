@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"第一个VC viewDidLoad");
+    DDLogInfo(@"第一个VC viewDidLoad");
     self.view.backgroundColor=[UIColor whiteColor];
     
     if (!self.myView) {
@@ -83,68 +83,68 @@
     
     
     
-    NSLog(@"myView当前的坐标：: %@",NSStringFromCGRect(self.myView.frame));
+    DDLogInfo(@"myView当前的坐标：: %@",NSStringFromCGRect(self.myView.frame));
 }
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    NSLog(@"viewWillAppear");
+    DDLogInfo(@"viewWillAppear");
     
-    NSLog(@"myView当前的坐标：: %@",NSStringFromCGRect(self.myView.frame));
+    DDLogInfo(@"myView当前的坐标：: %@",NSStringFromCGRect(self.myView.frame));
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    NSLog(@"didReceiveMemoryWarning");
+    DDLogInfo(@"didReceiveMemoryWarning");
 }
 
 -(void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:YES];
-    NSLog(@"viewWillDisappear");
+    DDLogInfo(@"viewWillDisappear");
 }
 
 -(void)loadView
 {
     [super loadView];
-    NSLog(@"loadView");
+    DDLogInfo(@"loadView");
 }
 
 -(void)viewWillLayoutSubviews
 {
     [super viewWillLayoutSubviews];
-    NSLog(@"viewWillLayoutSubviews");
+    DDLogInfo(@"viewWillLayoutSubviews");
     
-    NSLog(@"myView当前的坐标：: %@",NSStringFromCGRect(self.myView.frame));
+    DDLogInfo(@"myView当前的坐标：: %@",NSStringFromCGRect(self.myView.frame));
 }
 
 -(void)viewDidLayoutSubviews
 {
     [super viewDidLayoutSubviews];
-    NSLog(@"viewDidLayoutSubviews");
+    DDLogInfo(@"viewDidLayoutSubviews");
     
-    NSLog(@"myView当前的坐标：: %@",NSStringFromCGRect(self.myView.frame));
+    DDLogInfo(@"myView当前的坐标：: %@",NSStringFromCGRect(self.myView.frame));
     
-    NSLog(@"---------------");
-    NSLog(@"坐标值，要到viewDidLayoutSubviews 才正确。根视图的大小改变了，子视图必须相应做出调整才可以正确显示，这就是为什么要在 viewDidLayoutSubviews 中调整动态视图的frame");
-    NSLog(@"---------------");
+    DDLogInfo(@"---------------");
+    DDLogInfo(@"坐标值，要到viewDidLayoutSubviews 才正确。根视图的大小改变了，子视图必须相应做出调整才可以正确显示，这就是为什么要在 viewDidLayoutSubviews 中调整动态视图的frame");
+    DDLogInfo(@"---------------");
     
 }
 
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:YES];
-    NSLog(@"第一个VC viewDidAppear");
+    DDLogInfo(@"第一个VC viewDidAppear");
 }
 -(void)viewDidDisappear:(BOOL)animated
 {
     [super viewDidDisappear:YES];
-    NSLog(@"第一个VC viewDidDisappear");
+    DDLogInfo(@"第一个VC viewDidDisappear");
 }
 -(void)awakeFromNib
 {
     [super awakeFromNib];
-    NSLog(@"第一个VC awakeFromNib");
+    DDLogInfo(@"第一个VC awakeFromNib");
 }
 
 

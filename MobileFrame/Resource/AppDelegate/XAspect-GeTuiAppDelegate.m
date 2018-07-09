@@ -40,7 +40,7 @@ AspectPatch(-, void, application:(UIApplication *)application didRegisterForRemo
     
     [GeTuiSdk registerDeviceToken:myToken];
     
-    NSLog(@"\n>>>[DeviceToken Success]:%@\n\n", myToken);
+    DDLogInfo(@"\n>>>[DeviceToken Success]:%@\n\n", myToken);
     
     return XAMessageForward(application:application didRegisterForRemoteNotificationsWithDeviceToken:deviceToken);
 }
@@ -50,7 +50,7 @@ AspectPatch(-, void, application:(UIApplication *)application didFailToRegisterF
     
     [GeTuiSdk registerDeviceToken:@""];
     
-    NSLog(@"\n>>>[DeviceToken Error]:%@\n\n", error.description);
+    DDLogInfo(@"\n>>>[DeviceToken Error]:%@\n\n", error.description);
     
     return XAMessageForward(application:application didFailToRegisterForRemoteNotificationsWithError:error);
 }
@@ -109,7 +109,7 @@ AspectPatch(-, void, application:(UIApplication *)application didRegisterUserNot
         center.delegate = self;
         [center requestAuthorizationWithOptions:(UNAuthorizationOptionBadge | UNAuthorizationOptionSound | UNAuthorizationOptionAlert | UNAuthorizationOptionCarPlay) completionHandler:^(BOOL granted, NSError *_Nullable error) {
             if (!error) {
-                NSLog(@"request authorization succeeded!");
+                DDLogInfo(@"request authorization succeeded!");
             }
         }];
         
@@ -144,7 +144,7 @@ AspectPatch(-, void, application:(UIApplication *)application didRegisterUserNot
      */
     NSDictionary *userInfo = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
     if (userInfo) {
-        NSLog(@"\n>>>[Launching RemoteNotification]:%@", userInfo);
+        DDLogInfo(@"\n>>>[Launching RemoteNotification]:%@", userInfo);
     }
 }
 
@@ -155,7 +155,7 @@ AspectPatch(-, void, application:(UIApplication *)application didRegisterUserNot
 //  iOS 10: App在前台获取到通知
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler {
     
-    NSLog(@"willPresentNotification：%@", notification.request.content.userInfo);
+    DDLogInfo(@"willPresentNotification：%@", notification.request.content.userInfo);
     
     // 根据APP需要，判断是否要提示用户Badge、Sound、Alert
     completionHandler(UNNotificationPresentationOptionBadge | UNNotificationPresentationOptionSound | UNNotificationPresentationOptionAlert);
@@ -164,7 +164,7 @@ AspectPatch(-, void, application:(UIApplication *)application didRegisterUserNot
 //  iOS 10: 点击通知进入App时触发
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)())completionHandler {
     
-    NSLog(@"didReceiveNotification：%@", response.notification.request.content.userInfo);
+    DDLogInfo(@"didReceiveNotification：%@", response.notification.request.content.userInfo);
     
     // [ GTSdk ]：将收到的APNs信息传给个推统计
     [GeTuiSdk handleRemoteNotification:response.notification.request.content.userInfo];
@@ -180,13 +180,13 @@ AspectPatch(-, void, application:(UIApplication *)application didRegisterUserNot
 /** SDK启动成功返回cid */
 - (void)GeTuiSdkDidRegisterClient:(NSString *)clientId {
     // [EXT]: 个推SDK已注册，返回clientId
-    NSLog(@"\n>>>[GeTuiSdk RegisterClient]:%@\n\n", clientId);
+    DDLogInfo(@"\n>>>[GeTuiSdk RegisterClient]:%@\n\n", clientId);
 }
 
 /** SDK遇到错误回调 */
 - (void)GeTuiSdkDidOccurError:(NSError *)error {
     // [EXT]:个推错误报告，集成步骤发生的任何错误都在这里通知，如果集成后，无法正常收到消息，查看这里的通知。
-    NSLog(@"\n>>>[GexinSdk error]:%@\n\n", [error localizedDescription]);
+    DDLogInfo(@"\n>>>[GexinSdk error]:%@\n\n", [error localizedDescription]);
 }
 
 
@@ -196,22 +196,22 @@ AspectPatch(-, void, application:(UIApplication *)application didRegisterUserNot
 - (void)GeTuiSdkDidSendMessage:(NSString *)messageId result:(int)result {
     // [EXT]:发送上行消息结果反馈
     NSString *msg = [NSString stringWithFormat:@"sendmessage=%@,result=%d", messageId, result];
-    NSLog(@"\n>>>[GexinSdk DidSendMessage]:%@\n\n", msg);
+    DDLogInfo(@"\n>>>[GexinSdk DidSendMessage]:%@\n\n", msg);
 }
 
 /** SDK运行状态通知 */
 - (void)GeTuiSDkDidNotifySdkState:(SdkStatus)aStatus {
     // [EXT]:通知SDK运行状态
-    NSLog(@"\n>>>[GexinSdk SdkState]:%u\n\n", aStatus);
+    DDLogInfo(@"\n>>>[GexinSdk SdkState]:%u\n\n", aStatus);
 }
 
 /** SDK设置推送模式回调 */
 - (void)GeTuiSdkDidSetPushMode:(BOOL)isModeOff error:(NSError *)error {
     if (error) {
-        NSLog(@"\n>>>[GexinSdk SetModeOff Error]:%@\n\n", [error localizedDescription]);
+        DDLogInfo(@"\n>>>[GexinSdk SetModeOff Error]:%@\n\n", [error localizedDescription]);
         return;
     }
-    NSLog(@"\n>>>[GexinSdk SetModeOff]:%@\n\n", isModeOff ? @"开启" : @"关闭");
+    DDLogInfo(@"\n>>>[GexinSdk SetModeOff]:%@\n\n", isModeOff ? @"开启" : @"关闭");
 }
 
 

@@ -112,7 +112,7 @@
 
 - (void)itemButtonTappedAtIndex:(NSUInteger)index
 {
-    NSLog(@"You tap at index : %ld", index);
+    DDLogInfo(@"You tap at index : %ld", index);
 }
 
 //--------------------------------------------萌萌的分割线---------------------------------------------------
@@ -183,7 +183,7 @@
 }
 
 - (void)dwBtnClick:(UIButton *)sender {
-    NSLog(@"DWButton tapped, tag: %ld", (long)sender.tag);
+    DDLogInfo(@"DWButton tapped, tag: %ld", (long)sender.tag);
 }
 
 

@@ -42,19 +42,17 @@ AspectPatch(-, BOOL, application:(UIApplication *)application didFinishLaunching
 {
     //如果是测试本地版本开启调试工具FLEX
 #if DEBUG&LOCAL
-    [[FLEXManager sharedManager] showExplorer];
+    [[FLEXManager sharedManager] showExplorer];    
 #endif
-    
+
     //日志初始化
     [FileLogger sharedManager];
-    
-    
     return XAMessageForward(application:application didFinishLaunchingWithOptions:launchOptions);
 }
 
 AspectPatch(-,void,applicationWillResignActive:(UIApplication *)application)
 {
-    NSLog(@"applicationWillResignActive");
+    DDLogInfo(@"applicationWillResignActive");
 }
 
 @end

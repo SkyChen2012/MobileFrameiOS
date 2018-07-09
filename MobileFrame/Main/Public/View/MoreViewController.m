@@ -9,6 +9,9 @@
 #import "MoreViewController.h"
 
 #import "AudioVideoHomeViewController.h"
+#import "LoggerViewController.h"
+#import "SensorViewController.h"
+#import "emailViewController.h"
 
 @interface MoreViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -31,7 +34,10 @@
 
 - (void)initData{
     if (!_dataArray) {
-        _dataArray = @[@"AudioVideofunc"];
+        _dataArray = @[@"AudioVideofunc",
+                        @"日志记录",
+                        @"传感器",
+                        @"Email"];
     }
 }
 
@@ -92,7 +98,15 @@
         case 0:
             vc = [[AudioVideoHomeViewController alloc] init];
             break;
-            
+        case 1:
+            vc = [[LoggerViewController alloc] init];
+            break;
+        case 2:
+            vc = [[SensorViewController alloc] init];
+            break;
+        case 3:
+            vc = [[emailViewController alloc] init];
+            break;
         default:
             break;
     }

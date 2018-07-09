@@ -126,7 +126,7 @@
 -(MPMediaQuery *)getLocalMediaQuery{
     MPMediaQuery *mediaQueue=[MPMediaQuery songsQuery];
     for (MPMediaItem *item in mediaQueue.items) {
-        NSLog(@"标题：%@,%@",item.title,item.albumTitle);
+        DDLogInfo(@"标题：%@,%@",item.title,item.albumTitle);
     }
     return mediaQueue;
 }
@@ -141,7 +141,7 @@
     NSMutableArray *array=[NSMutableArray array];
     for (MPMediaItem *item in mediaQueue.items) {
         [array addObject:item];
-        NSLog(@"标题：%@,%@",item.title,item.albumTitle);
+        DDLogInfo(@"标题：%@,%@",item.title,item.albumTitle);
     }
     MPMediaItemCollection *mediaItemCollection=[[MPMediaItemCollection alloc]initWithItems:[array copy]];
     return mediaItemCollection;
@@ -156,7 +156,7 @@
 //    NSString *artist= [mediaItem valueForKey:MPMediaItemPropertyAlbumArtist];
 //    MPMediaItemArtwork *artwork= [mediaItem valueForKey:MPMediaItemPropertyArtwork];
 //    UIImage *image=[artwork imageWithSize:CGSizeMake(100, 100)];//专辑图片
-    NSLog(@"标题：%@,表演者：%@,专辑：%@",mediaItem.title ,mediaItem.artist,mediaItem.albumTitle);
+    DDLogInfo(@"标题：%@,表演者：%@,专辑：%@",mediaItem.title ,mediaItem.artist,mediaItem.albumTitle);
     [self.musicPlayer setQueueWithItemCollection:mediaItemCollection];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -182,13 +182,13 @@
 -(void)playbackStateChange:(NSNotification *)notification{
     switch (self.musicPlayer.playbackState) {
         case MPMusicPlaybackStatePlaying:
-            NSLog(@"正在播放...");
+            DDLogInfo(@"正在播放...");
             break;
         case MPMusicPlaybackStatePaused:
-            NSLog(@"播放暂停.");
+            DDLogInfo(@"播放暂停.");
             break;
         case MPMusicPlaybackStateStopped:
-            NSLog(@"播放停止.");
+            DDLogInfo(@"播放停止.");
             break;
         default:
             break;

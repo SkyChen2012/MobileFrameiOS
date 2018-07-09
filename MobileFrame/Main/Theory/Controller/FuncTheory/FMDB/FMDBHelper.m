@@ -60,7 +60,7 @@ static FMDBHelper *_DBCtl = nil;
     
     // 获得Documents目录路径
 //    NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
-//    NSLog(@"kPathDocument = %@",kPathDocument);
+//    DDLogInfo(@"kPathDocument = %@",kPathDocument);
     // 文件路径
     NSString *filePath = [kPathDocument stringByAppendingPathComponent:@"model.sqlite"];
     // 实例化FMDataBase对象

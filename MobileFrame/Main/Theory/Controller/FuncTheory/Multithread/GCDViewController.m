@@ -75,27 +75,27 @@
 //一：并发队列 + 同步执行 (不会开启新线程，执行完一个任务，再执行下一个任务，并发队列只有结合异步执行才有效果)
 - (void) syncConcurrent
 {
-    NSLog(@"syncConcurrent---begin");
+    DDLogInfo(@"syncConcurrent---begin");
     
     dispatch_queue_t queue= dispatch_queue_create("test.queue", DISPATCH_QUEUE_CONCURRENT);
     
     dispatch_sync(queue, ^{
         for (int i = 0; i < 2; ++i) {
-            NSLog(@"1---[syncConcurrent]---%@",[NSThread currentThread]);
+            DDLogInfo(@"1---[syncConcurrent]---%@",[NSThread currentThread]);
         }
     });
     dispatch_sync(queue, ^{
         for (int i = 0; i < 2; ++i) {
-            NSLog(@"2---[syncConcurrent]---%@",[NSThread currentThread]);
+            DDLogInfo(@"2---[syncConcurrent]---%@",[NSThread currentThread]);
         }
     });
     dispatch_sync(queue, ^{
         for (int i = 0; i < 2; ++i) {
-            NSLog(@"3---[syncConcurrent]---%@",[NSThread currentThread]);
+            DDLogInfo(@"3---[syncConcurrent]---%@",[NSThread currentThread]);
         }
     });
     
-    NSLog(@"syncConcurrent---end");
+    DDLogInfo(@"syncConcurrent---end");
     
     //输出内容：
     //    syncConcurrent---begin
@@ -116,27 +116,27 @@
 //二：并发队列 + 异步执行(可同时开启多线程，任务交替执行)
 - (void) asyncConcurrent
 {
-    NSLog(@"asyncConcurrent---begin");
+    DDLogInfo(@"asyncConcurrent---begin");
     
     dispatch_queue_t queue= dispatch_queue_create("test.asyncqueue", DISPATCH_QUEUE_CONCURRENT);
     
     dispatch_async(queue, ^{
         for (int i = 0; i < 2; ++i) {
-            NSLog(@"1---[asyncConcurrent]---%@",[NSThread currentThread]);
+            DDLogInfo(@"1---[asyncConcurrent]---%@",[NSThread currentThread]);
         }
     });
     dispatch_async(queue, ^{
         for (int i = 0; i < 2; ++i) {
-            NSLog(@"2---[asyncConcurrent]---%@",[NSThread currentThread]);
+            DDLogInfo(@"2---[asyncConcurrent]---%@",[NSThread currentThread]);
         }
     });
     dispatch_async(queue, ^{
         for (int i = 0; i < 2; ++i) {
-            NSLog(@"3---[asyncConcurrent]---%@",[NSThread currentThread]);
+            DDLogInfo(@"3---[asyncConcurrent]---%@",[NSThread currentThread]);
         }
     });
     
-    NSLog(@"asyncConcurrent---end");
+    DDLogInfo(@"asyncConcurrent---end");
     
     
     //输出内容：
@@ -158,27 +158,27 @@
 //三：串行队列 + 同步执行（不会开启新线程，在当前线程执行任务。任务是串行的，执行完一个任务，再执行下一个任务）
 - (void) syncSerial
 {
-    NSLog(@"syncSerial---begin");
+    DDLogInfo(@"syncSerial---begin");
     
     dispatch_queue_t queue = dispatch_queue_create("test.syncSerial", DISPATCH_QUEUE_SERIAL);
     
     dispatch_sync(queue, ^{
         for (int i = 0; i < 2; ++i) {
-            NSLog(@"1---[syncSerial]---%@",[NSThread currentThread]);
+            DDLogInfo(@"1---[syncSerial]---%@",[NSThread currentThread]);
         }
     });
     dispatch_sync(queue, ^{
         for (int i = 0; i < 2; ++i) {
-            NSLog(@"2---[syncSerial]---%@",[NSThread currentThread]);
+            DDLogInfo(@"2---[syncSerial]---%@",[NSThread currentThread]);
         }
     });
     dispatch_sync(queue, ^{
         for (int i = 0; i < 2; ++i) {
-            NSLog(@"3---[syncSerial]---%@",[NSThread currentThread]);
+            DDLogInfo(@"3---[syncSerial]---%@",[NSThread currentThread]);
         }
     });
     
-    NSLog(@"syncSerial---end");
+    DDLogInfo(@"syncSerial---end");
     
     
     //输出内容
@@ -200,27 +200,27 @@
 //四：串行队列 + 异步执行(会开启新线程，但是因为任务是串行的，执行完一个任务，再执行下一个任务)
 - (void) asyncSerial
 {
-    NSLog(@"asyncSerial---begin");
+    DDLogInfo(@"asyncSerial---begin");
     
     dispatch_queue_t queue = dispatch_queue_create("test.asyncSerial", DISPATCH_QUEUE_SERIAL);
     
     dispatch_async(queue, ^{
         for (int i = 0; i < 2; ++i) {
-            NSLog(@"1---[asyncSerial]---%@",[NSThread currentThread]);
+            DDLogInfo(@"1---[asyncSerial]---%@",[NSThread currentThread]);
         }
     });
     dispatch_async(queue, ^{
         for (int i = 0; i < 2; ++i) {
-            NSLog(@"2---[asyncSerial]---%@",[NSThread currentThread]);
+            DDLogInfo(@"2---[asyncSerial]---%@",[NSThread currentThread]);
         }
     });
     dispatch_async(queue, ^{
         for (int i = 0; i < 2; ++i) {
-            NSLog(@"3---[asyncSerial]---%@",[NSThread currentThread]);
+            DDLogInfo(@"3---[asyncSerial]---%@",[NSThread currentThread]);
         }
     });
     
-    NSLog(@"asyncSerial---end");
+    DDLogInfo(@"asyncSerial---end");
     
     
     //输出的内容
@@ -241,27 +241,27 @@
 //五. 主队列 + 同步执行  (互等卡住不可行(在主线程中调用),直接闪退)
 - (void)syncMain
 {
-    NSLog(@"syncMain---begin");
+    DDLogInfo(@"syncMain---begin");
     
     dispatch_queue_t queue = dispatch_get_main_queue();
     
     dispatch_sync(queue, ^{
         for (int i = 0; i < 2; ++i) {
-            NSLog(@"1---[syncMain]---%@",[NSThread currentThread]);
+            DDLogInfo(@"1---[syncMain]---%@",[NSThread currentThread]);
         }
     });
     dispatch_sync(queue, ^{
         for (int i = 0; i < 2; ++i) {
-            NSLog(@"2---[syncMain]---%@",[NSThread currentThread]);
+            DDLogInfo(@"2---[syncMain]---%@",[NSThread currentThread]);
         }
     });
     dispatch_sync(queue, ^{
         for (int i = 0; i < 2; ++i) {
-            NSLog(@"3---[syncMain]---%@",[NSThread currentThread]);
+            DDLogInfo(@"3---[syncMain]---%@",[NSThread currentThread]);
         }
     });
     
-    NSLog(@"syncMain---end");
+    DDLogInfo(@"syncMain---end");
     
     //    说明
     //    我们把任务放到了主队列中，也就是放到了主线程的队列中。而同步执行有个特点，就是对于任务是立马执行的。那么当我们把第一个任务放进主队列中，它就会立马执行。但是主线程现在正在处理syncMain方法，所以任务需要等syncMain执行完才能执行。而syncMain执行到第一个任务的时候，又要等第一个任务执行完才能往下执行第二个和第三个任务。
@@ -273,27 +273,27 @@
 //六：主队列 + 异步执行 (只在主线程中执行任务，执行完一个任务，再执行下一个任务)
 - (void)asyncMain
 {
-    NSLog(@"asyncMain---begin");
+    DDLogInfo(@"asyncMain---begin");
     
     dispatch_queue_t queue = dispatch_get_main_queue();
     
     dispatch_async(queue, ^{
         for (int i = 0; i < 2; ++i) {
-            NSLog(@"1---[asyncMain]---%@",[NSThread currentThread]);
+            DDLogInfo(@"1---[asyncMain]---%@",[NSThread currentThread]);
         }
     });
     dispatch_async(queue, ^{
         for (int i = 0; i < 2; ++i) {
-            NSLog(@"2---[asyncMain]---%@",[NSThread currentThread]);
+            DDLogInfo(@"2---[asyncMain]---%@",[NSThread currentThread]);
         }
     });
     dispatch_async(queue, ^{
         for (int i = 0; i < 2; ++i) {
-            NSLog(@"3---[asyncMain]---%@",[NSThread currentThread]);
+            DDLogInfo(@"3---[asyncMain]---%@",[NSThread currentThread]);
         }
     });
     
-    NSLog(@"asyncMain---end");
+    DDLogInfo(@"asyncMain---end");
     
     //输出的内容
     //    asyncMain---begin
@@ -318,10 +318,10 @@
     // 2. 异步执行
     for (int i = 0; i < 10; ++i) {
         dispatch_async(q, ^{
-            NSLog(@"asyncGloba：%@ %d", [NSThread currentThread], i);
+            DDLogInfo(@"asyncGloba：%@ %d", [NSThread currentThread], i);
         });
     }
-    NSLog(@"come here");
+    DDLogInfo(@"come here");
     
     //输出内容：
     //    come here

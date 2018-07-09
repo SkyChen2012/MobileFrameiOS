@@ -131,7 +131,7 @@
 - (void)setCenterImage:(UIImage *)centerImage
 {
     if (!centerImage) {
-        NSLog(@"Load center image failed ... ");
+        DDLogInfo(@"Load center image failed ... ");
         return ;
     }
     _centerImage = centerImage;
@@ -140,7 +140,7 @@
 - (void)setCenterHighlightedImage:(UIImage *)highlightedImage
 {
     if (!highlightedImage) {
-        NSLog(@"Load highted image failed ... ");
+        DDLogInfo(@"Load highted image failed ... ");
         return ;
     }
     _centerHighlightedImage = highlightedImage;

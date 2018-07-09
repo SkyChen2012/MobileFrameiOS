@@ -126,7 +126,7 @@
     /// 特殊处理 - 是否需要登录
     BOOL isBaiDuService = [viewController.topViewController isKindOfClass:[DiscoveryViewController class]];
     if (isBaiDuService) {
-        NSLog(@"你点击了TabBar第二个");
+        DDLogInfo(@"你点击了TabBar第二个");
     }
     return YES;
 }

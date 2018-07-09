@@ -168,7 +168,7 @@
  */
 - (void)addData{
     
-    NSLog(@"addData");
+    DDLogInfo(@"addData");
     
     int nameRandom = arc4random_uniform(1000);
     NSInteger ageRandom  = arc4random_uniform(100) + 1;

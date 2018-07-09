@@ -159,14 +159,14 @@
 -(NSString *)selectIndexFetcher:(DelegateCodeStandards *)codestandards withIndex:(NSInteger)index
 {
     if (codestandards ==_codeStandards) {
-        NSLog(@"_codeStandards 当前的值为：%ld",index);
-        NSLog(@"_codeStandards 当前的名字为：%@",codestandards.userName);
+        DDLogInfo(@"_codeStandards 当前的值为：%ld",index);
+        DDLogInfo(@"_codeStandards 当前的名字为：%@",codestandards.userName);
         return codestandards.userName;
     }
     else if (codestandards==_otherCodeStandards)
     {
-        NSLog(@"_otherCodeStandards 当前的值为：%ld",index);
-        NSLog(@"_otherCodeStandards 当前的名字为：%@",codestandards.userName);
+        DDLogInfo(@"_otherCodeStandards 当前的值为：%ld",index);
+        DDLogInfo(@"_otherCodeStandards 当前的名字为：%@",codestandards.userName);
         return codestandards.userName;
     }
     return @"";
@@ -174,7 +174,7 @@
 
 -(void)networkFetcher:(DelegateCodeStandards *)codestandards didReceiveName:(NSString *)name
 {
-    NSLog(@"networkFetcher %@",name);
+    DDLogInfo(@"networkFetcher %@",name);
 }
 /*
 #pragma mark - Navigation
